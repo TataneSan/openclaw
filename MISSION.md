@@ -4299,6 +4299,9 @@ Push automatique après chaque outil.
 ## Vague 607 — CLI Tools (JSON, env, texte)
 - [x] json-null-stats : statistiques sur les valeurs null d'un document JSON (ratio NULL/1/0/0.0/""/"null", par chemin, --require-max-null exit 2, JSON) ✓ 2026-08-03
 - [x] env-value-validate : valide les valeurs d'un .env (règles URL/EMAIL/IP/PORT/BOOL/INT/HEX/BASE64/PATH, détection placeholders et secrets faibles, --strict exit 2, JSON) ✓ 2026-08-03
+- [x] json-depth-report : rapport de profondeur d'imbrication JSON (max depth, deepest path jq-style, histogramme feuilles par niveau, compteurs objets/arrays/scalars, gates --max-depth/--require-leaf-depth exit 2, JSON) ✓ 2026-08-03
+- [x] env-duplicate-keys : détecte et supprime les clés dupliquées d'un .env (export toléré, commentaires inline respectés, --dedup --keep first/last, --in-place, gates --check/--require-duplicates/--max-duplicates exit 2, JSON) ✓ 2026-08-03
+- [x] text-eol-detect : détecte et convertit les fins de ligne LF/CRLF/CR (compteurs par style, classification mixed/none, --to + --in-place, gates --expect/--require-mixed/--require-clean exit 2, JSON) ✓ 2026-08-03
 
 ## Vague 188 — CLI Tools (CSV & texte)
 - [x] csv-count-values : fréquence des valeurs d'une colonne CSV ✓ 2026-08-01

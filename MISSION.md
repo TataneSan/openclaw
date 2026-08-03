@@ -1,6 +1,13 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 672 — CLI Tools (texte, lignes, env, URLs, CSV)
+- [x] text-dedupe-lines-stable : déduplique les lignes en gardant la première occurrence (ordre stable, --ignore-case/--strip, --keep-blank-duplicates, --count, --in-place, gates --check/--require-dupes/--max-dupes exit 2, JSON, 20 tests) ✓ 2026-08-03
+- [x] line-trailing-ws-check : détecte/supprime les espaces/tabulations en fin de ligne (CRLF-aware, --tabs-only/--spaces-only/--min-run/--blank-is-clean, --show marqueurs visibles, --strip/-o/--in-place, gates --check/--max-findings/--require-findings exit 2, JSON, 21 tests) ✓ 2026-08-03
+- [x] env-value-unquote : retire les quotes décoratives des valeurs .env (conservateur par défaut, --all, export/commentaires préservés, '#' dans les quotes non-commentaire, -o/--in-place, gates --check/--require-changes/--max-changes exit 2, JSON, 21 tests) ✓ 2026-08-03
+- [x] text-url-extract : extrait les URLs de tout schéma (ponctuation/parens équilibrées, unique first-seen, --positions/--count/--hosts-only, --schemes, tris, gates --check/--require/--max-count/--max-unique/--require-host exit 2, JSON, 22 tests) ✓ 2026-08-03
+- [x] csv-cell-count-audit : audite les lignes CSV ragged (largeur header/--expect N, sniff délimiteur + fallback, BOM, quotes/newlines, --skip-blank/--sample, gates --check/--max-bad/--require-bad exit 2, JSON, 22 tests) ✓ 2026-08-03
+
 ## Vague 671 — CLI Tools (texte, CSV, env, indentation)
 - [x] text-tab-to-spaces : convertit tabulations <-> espaces (tab stops respectés, --to-tabs, CRLF préservé, gates --check/--max-tabs/--require-conversion exit 2, JSON, 19 tests) ✓ 2026-08-03
 

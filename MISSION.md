@@ -1,5 +1,11 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 651 — CLI Tools (Markdown, texte, lignes, JSON)
+- [x] markdown-footnote-check : audite les footnotes Markdown (références [^id] sans définition, définitions inutilisées et doublons, fences/inline code ignorés, filtres --dangling-only/--unused-only, gates --check/--max-dangling/--max-unused/--require-footnotes exit 2, JSON stderr, stdin, 22 tests) ✓ 2026-08-03
+- [x] text-number-normalize : normalise l'écriture des nombres dans un texte (séparateur décimal dot/comma, milliers space/comma/dot/apostrophe/underscore/none, --decimals N, signes préservés, parseur manuel tolérant 1,234/3,14/1.234.567/1.5e3, --in-place/-o, gates --check/--require-change/--max-changes exit 2, JSON stderr, stdin, 29 tests) ✓ 2026-08-03
+- [x] line-number-strip : supprime ou ajoute les numéros de ligne en préfixe (styles colon/pipe/cat/paren/dot auto-détectés, --add avec --add-sep/--align/--start, --in-place/-o, gates --check/--require-numbered/--min-numbered exit 2, JSON stderr, stdin, 19 tests) ✓ 2026-08-03
+- [x] json-types-report : rapport des types JSON par chemin jq-style ($, a.b, a[]) avec comptages et flags mixed (JSON/JSONL agrégés, --path/--mixed-only/--sort, gates --check/--require-type/--max-depth/--max-mixed exit 2, JSON stdout, stdin, 23 tests) ✓ 2026-08-03
+
 ## Vague 650 — CLI Tools (CSV, Markdown, lignes, INI, texte)
 - [x] csv-quoting-normalize : normalise le style de quoting CSV (minimal/all/non-numeric/none avec escaping, délimiteur sniffé, round-trip stdlib, --in-place/-o, gates --check/--require-change/--require-quoted/--require-unquoted exit 2, JSON stderr, stdin, 21 tests) ✓ 2026-08-03
 - [x] markdown-inline-code-report : rapporte les spans de code inline Markdown (`code` et ``code``, line:col, tick count, fences/indented exclus, unclosed détectés, --list --unique --sort --multi-tick-only, gates --check/--require-any/--min-count/--max-count/--max-len/--require-unclosed exit 2, JSON stderr, stdin, 20 tests) ✓ 2026-08-03

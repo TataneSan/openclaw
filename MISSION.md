@@ -1,6 +1,14 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 646 — CLI Tools (JSON, lignes, Markdown, texte)
+- [x] json-deep-flatten : aplatit un JSON imbriqué en paires chemin=valeur et reconstruit (jq-style a.b[2], conteneurs vides préservés, --unflatten, gates --check/--require-leaves/--max-leaves exit 2, JSON, stdin, 10 tests) ✓ 2026-08-03
+- [x] line-reverse-lines : inverse l'ordre des lignes (tac portable, --chars graphemes combinants Unicode, --skip-blank, --in-place, gates --expect-lines/--max-lines/--check-reverse/--require-change exit 2, JSON, stdin, 12 tests) ✓ 2026-08-03
+- [x] markdown-table-to-csv : convertit les tables Markdown en CSV (fences ignorées, \| déséchappé, stripping inline md, --table N/--combine, gates --require-tables/--max-tables/--expect-columns/--check-malformed exit 2, JSON, stdin, 10 tests) ✓ 2026-08-03
+- [x] line-cut-fields : extrait/réordonne des champs par ligne (cut superset : ranges 1,3,5-7,-2,3-, --complement, --whitespace, --only-delimited, --unique, gates --expect-fields/--check-lines/--max-short/--require-delimiter exit 2, JSON, stdin, 16 tests) ✓ 2026-08-03
+- [x] line-split-words : éclate les lignes en mots un par ligne (regex --split-on, --lower/--unique/--sort, filtres --min-len/--max-len/--keep-with, --number/prefixe/suffixe, --count-only, gates --expect-unique/--min-words/--max-words/--check-unique exit 2, JSON, stdin, 13 tests) ✓ 2026-08-03
+
+
 ## Vague 645 — CLI Tools (INI, texte, Markdown, JSON)
 - [x] ini-quote-normalize : rapporte et normalise le style de quoting des valeurs INI (none/single/double, commentaires inline préservés, valeurs dangereuses gardées quotées, --in-place/-o, gates --check/--require-style/--max-changes exit 2, JSON, stdin, 19 tests) ✓ 2026-08-03
 - [x] text-slash-escape : encode/décode les séquences backslash (\n \t \xHH \uXXXX \UXXXXXXXX, --keep-newlines, --escape-nonprint, --strict offsets, gates --check/--expect-changed/--expect-unchanged/--max-changes exit 2, JSON stderr, stdin, 25 tests) ✓ 2026-08-03

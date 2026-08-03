@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 631 — CLI Tools (texte, CSV, JSON, lignes, gitignore)
+- [x] text-letter-frequency-csv : fréquence des caractères Unicode (casefold, --include-digits/space/punct, CSV+JSON, gates require/forbid-letter/min-max-unique exit 2, 12 tests) ✓ 2026-08-03
+- [x] csv-column-pick-list : extrait les valeurs de colonnes CSV (nom ou #index, délimiteur sniffé, multi-colonnes --join, --unique/--sort/--ignore-case, --skip-empty, gates min/max/require/forbid-value exit 2, JSON, 13 tests) ✓ 2026-08-03
+- [x] json-single-quote : convertit JSON vers notation Python single-quote (True/False/None) et inversement via ast.literal_eval (indent/compact/sort/trailing-comma, chemins dotted, gates require-key/check exit 2, 13 tests) ✓ 2026-08-03
+- [x] line-suffix-strip : retire des suffixes littéraux/regex en fin de ligne (longest-first, EOL CRLF préservées, --drop-empty, --in-place/-o, --check exit 2, JSON, 11 tests) ✓ 2026-08-03
+- [x] gitignore-audit : audit d'un .gitignore (duplicates, case-duplicates, trailing-space, double-star-only, redundant sous-dossiers, negation-trap, --strict, --fix-dups, gates no-duplicates/no-redundant/no-negation-traps/max-issues exit 2, JSON, 13 tests) ✓ 2026-08-03
+
 ## Vague 630 — CLI Tools (JSON, texte, lignes, Markdown, INI)
 - [x] json-pretty-compact : pretty-print/compacte des documents JSON et JSONL (validation, --indent, 12 tests) ✓ 2026-08-03
 - [x] ini-to-env : convertit des fichiers INI en .env (sections préfixées, --flat/--prefix/--upper, Go) ✓ 2026-08-03

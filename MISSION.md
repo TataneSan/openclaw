@@ -1,5 +1,10 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 624 — CLI Tools (JSON, lignes, Markdown)
+- [x] json-array-items : extrait les items d'un array JSON racine (JSONL auto, --index avec offsets négatifs, --unwrap single-key, --pretty, gates min/max/require-array/non-empty/scalars-only exit 2, JSON, 17 tests) ✓ 2026-08-03
+- [x] line-strip-suffix : retire un suffixe (ou une extension de fichier) de chaque ligne (--suffix, --ext, -i, --report/--count, gates require-match/min/max/require-none/expect exit 2, JSON, 17 tests) ✓ 2026-08-03
+- [x] markdown-bare-url-check : détecte les URLs nues dans un Markdown (fences, inline code, liens, images, autolinks, HTML ignorés, line:col, --unique, gates max-bare/require-none/expect exit 2, JSON, 15 tests) ✓ 2026-08-03
+
 ## Vague 623 — CLI Tools (CSV, URL, JSON, Markdown, texte)
 - [x] csv-duplicate-row-find : trouve et rapporte les lignes dupliquées d'un CSV (comparaison exacte ou par clés --key nom/index, --ignore-case/--trim, --dedupe garde la 1re occurrence, delimiter sniffé, gates check/min/max/require-any/require-none exit 2, JSON, 15 tests) ✓ 2026-08-03
 - [x] url-fragment-extract : extrait les fragments #anchor des URLs (bare-text scan via regex inline, --decode percent, empty # distingué, scroll-to-text ':~:' directives, --unique/--count/--with-url, gates check/min/max/require/forbid exit 2, JSON, 14 tests) ✓ 2026-08-03

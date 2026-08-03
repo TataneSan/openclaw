@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 598 — CLI Tools (fichiers, CSV, env, lignes, INI)
+- [x] file-empty-find : trouve fichiers et dossiers vides dans une arborescence (--whitespace-empty, --ignore-glob, --max-depth, --follow-symlinks, modes --files/--dirs, gates require-none/require-any/min/max-count + --check exit 2, JSON) ✓ 2026-08-03
+- [x] csv-split-files : découpe un CSV en N fichiers (--lines N ou --parts K équilibrés, header conservé, délimiteur auto, cellules multi-lignes, --dry-run, --force, gates min/max-parts/require-balanced exit 2, JSON) ✓ 2026-08-03
+- [x] line-number-gaps : audite les numéros en tête de ligne (styles 1. 2) [3] 4:, --pattern custom, --start/--step, détection gaps/doublons/désordre, gates require-contiguous/unique/ordered/min/max/expect-count + --check exit 2, JSON) ✓ 2026-08-03
+- [x] env-multi-join : fusionne plusieurs .env en overlay (last/first/error sur conflit, --export, --quote keep/strip/double, --keep-comments, --sort, --strict, --mask-values, gates require-key/forbid-key + --check exit 2, JSON) ✓ 2026-08-03
+- [x] ini-key-get : lit des valeurs dans des fichiers INI (subcommands get/keys/sections/dump, interpolation + --raw, --case-sensitive, --default fallback, dump ini/env/json avec --env-prefix, --json, exit 2 clé absente) ✓ 2026-08-03
+
 ## Vague 597 — CLI Tools (CSV, env, lignes, texte, fichiers, JSON)
 - [x] csv-remove-empty-columns : supprime les colonnes CSV dont toutes les cellules sont vides (délimiteur auto, --report, --no-header, --trim, gates require-empty/require-none-empty/min/max-removed exit 2, JSON) ✓ 2026-08-03
 - [x] env-empty-values : détecte/liste/supprime/remplit les variables vides d'un .env (KEY=, "", '', commentaires inline, --report/--remove/--fill/--in-place, --check/min/max-count exit 2, JSON) ✓ 2026-08-03

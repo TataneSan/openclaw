@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 602 — CLI Tools (CSV, HTTP, Markdown, texte, lignes)
+- [x] csv-column-mask : masque des colonnes CSV sensibles (modes full/first/last/hash sha256, délimiteur auto, --require-masked exit 2, --json) ✓ 2026-08-03
+- [x] http-header-canonical : normalise la casse des headers HTTP (Title-Case, exceptions ETag/WWW-Authenticate/X-Forwarded-*, --lowercase http2, --sort, --format http/json/dict, --check exit 2) ✓ 2026-08-03
+- [x] markdown-image-extract : extrait toutes les images d'un Markdown (inline, reference-style avec résolution, HTML img, code fences ignorées, --urls-only, lint --missing-alt/--broken-refs/--require-images exit 2, JSON) ✓ 2026-08-03
+- [x] text-byte-count : compte bytes/chars/words/lines UTF-8-aware (multi-fichiers + totals, --fields custom, --max-bytes/--max-chars exit 2, JSON) ✓ 2026-08-03
+- [x] line-padding-strip : supprime le padding leading/trailing par ligne (--chars custom, --keep-blank, --check exit 2, --in-place, JSON) ✓ 2026-08-03
+
 ## Vague 601 — CLI Tools (texte, lignes, env, URL)
 - [x] text-strip-ansi-color : supprime les séquences ANSI (CSI couleurs, cursor, OSC, charset) d'un flux (--check exit 2, --count, --in-place, --json) ✓ 2026-08-03
 - [x] line-crop-range : rogne chaque ligne à une plage de colonnes (indices négatifs, --fill pad, --ellipsis, --check-length exit 2, --json) ✓ 2026-08-03

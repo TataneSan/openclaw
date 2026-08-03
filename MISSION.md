@@ -1,5 +1,13 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 591 — CLI Tools (CSV, JSON, texte, Markdown, env, INI)
+- [x] csv-stat-summary : stats numériques complètes par colonne CSV (count/min/max/mean/median/stdev, --no-header, --precision, gate --require-numeric exit 2, --json) ✓ 2026-08-03
+- [x] json-defaults-merge : merge récursif d'un JSON utilisateur sur des défauts (--no-deep, --ignore-null, --delete-null, gates --require-keys/--require-changed/--require-unchanged exit 2, --json) ✓ 2026-08-03
+- [x] text-consonant-count : compte les consonnes par ligne (a,e,i,o,u + option --y-as-vowel, accents normalisés NFKD, gates --total-at-least/--total-equal/--require-consonant-free exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-html-comment-strip : strippe/rapporte/masque les commentaires HTML `<!-- -->` (modes strip/report/mask, fences préservés par défaut, --in-place, --include-fenced, gates exit 2, JSON) ✓ 2026-08-03
+- [x] ini-section-groups : groupe et rapporte les sections INI (--pattern glob/--regex/--prefix, --print, gates --require-match/--require-single/--max-sections exit 2, JSON) ✓ 2026-08-03
+- [x] text-longest-run : plus long run de caractères ou mots répétés (modes char/word, coords ligne/col, --include-newlines, gates --require-min/max/clean exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 590 — CLI Tools (JSON, fichiers, Markdown, texte)
 - [x] json-pick-paths : extrait des chemins dotted (a.b[0].c) d'un document JSON (--each-separate, --missing empty|null|fail exit 2, gates require-path, JSON) ✓ 2026-08-03
 - [x] file-extension-stats : stats d'extensions d'un dossier (compte, octets, --top, --sort count|bytes|name, gates max-total-bytes/max-files exit 2, JSON) ✓ 2026-08-03

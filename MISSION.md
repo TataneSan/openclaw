@@ -1,5 +1,13 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 658 — CLI Tools (env, Dockerfile, YAML, symlinks)
+- [x] ini-key-sort : trie les clés de chaque section INI (ordre sections préservé, commentaires attachés aux clés, stdin) ✓ 2026-08-03
+- [x] env-diff-check : compare les clés de .env contre une référence (.env.example), missing/extra/coverage, placeholders, valeurs jamais affichées par défaut, --allow-missing/--require-extras exit 2, JSON, stdin, 9 tests ✓ 2026-08-03
+- [x] dockerfile-arg-default : audit ARG vs ${VAR} dans Dockerfiles (ARG inutilisés, usages non déclarés, ARG sans défaut, continuations \\, ENV-aware, gates --check/--max-unused-args/--require-declared/--require-defaults exit 2, JSON, 10 tests) ✓ 2026-08-03
+- [x] yaml-key-list : liste les chemins de clés YAML jq-style (scanner stdlib par indentation, indices [n] pour séquences, --top-level/--max-depth/--leaves/--count, gates require/forbid/min/max-keys exit 2, JSON, stdin, 10 tests) ✓ 2026-08-03
+- [x] symlink-target-check : audite les symlinks d'une arborescence (broken/loops ELOOP/escapes hors racine/absolus, tags, followlinks=False, gates --check/--max-broken/--forbid-absolute/--forbid-escapes exit 2, JSON, -q, 10 tests) ✓ 2026-08-03
+
+
 ## Vague 657 — CLI Tools (bases, logs, Docker, durées, gitignore, stack traces)
 - [x] radix-convert : convertit des entiers entre bases 2..36 (auto 0x/0o/0b, pad, upper, batch stdin/fichier, --strict exit 2, JSON, 11 tests) ✓ 2026-08-03
 - [x] stack-trace-summarize : groupe et classe les stack traces répétées d'un log (normalisation lignes/hex/ids, --top, --top-frames, gates --require-traces/--max-unique exit 2, JSON, 7 tests) ✓ 2026-08-03

@@ -1,6 +1,13 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 661 — CLI Tools (timestamps, env, logs, Markdown, champs)
+- [x] text-extract-timestamps : extrait les timestamps ISO 8601/syslog/Apache/HH:MM:SS/epoch (filtres --kind, --unique, --count, --kind-stats, gates --check/--require exit 2, JSON, stdin) ✓ 2026-08-03
+- [x] json-to-env-vars : aplatit un JSON en lignes KEY=value (index/join/count pour arrays, --prefix, --export, --quote, --sort, --require, --check exit 2, JSON) ✓ 2026-08-03
+- [x] log-extract-ips : extrait et compte les IPv4 des logs (validation octets, invalides optionnels, --min-count, --unique, gates --check/--require/--max-count exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-bold-usage : audit des marqueurs gras (** vs __, positions, fences et code inline ignorés, --require-style, --check, --max-underscore exit 2, JSON) ✓ 2026-08-03
+- [x] line-swap-fields : échange deux champs par ligne (1-based, délimiteur custom, parse_intermixed_args, --strict exit 2, --report, JSON) ✓ 2026-08-03
+
 ## Vague 660 — CLI Tools (entités HTML, MIME, ports, codes pays, unicode)
 - [x] html-entity-encode : encode/décode les entités HTML (named/decimal/hex, --all, --ascii-only, --keep, --list positions, gates require-encoded/decoded/changes/entities exit 2, JSON, stdin, in-place, 28 tests) ✓ 2026-08-03
 

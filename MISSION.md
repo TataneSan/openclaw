@@ -1,6 +1,14 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 673 — CLI Tools (texte, JSON, INI, CSV, env, Markdown)
+- [x] text-dup-word-adjacent : détecte les mots doublés consécutifs ('the the', position ligne:col du premier mot, runs xN, adjacence whitespace stricte par défaut + --ignore-punctuation, --case-sensitive, gates --check/--max exit 2, JSON, stdin, 17 tests) ✓ 2026-08-03
+- [x] json-key-order-check : vérifie l'ordre des clés des objets JSON (alphabétique par défaut, ou ordre canonique via --reference doc, chemins jq-style, index de divergence, exit 2, JSON, stdin, 13 tests) ✓ 2026-08-03
+- [x] ini-duplicate-section-detect : détecte les sections INI définies plusieurs fois (lignes de chaque occurrence, commentaires ; et # ignorés, warnings headers malformés/noms vides, gates --check exit 2, JSON, stdin, 14 tests) ✓ 2026-08-03
+- [x] csv-cell-padding-audit : audite les cellules CSV avec espaces/tabs en tête ou queue (row/col, side leading/trailing xN, preview nettoyé, délimiteur auto , ; TAB |, quoted préservé, gates --check/--max exit 2, JSON, stdin, 16 tests) ✓ 2026-08-03
+- [x] env-values-numeric-range : valide les valeurs numériques .env contre des plages (inline '# range:MIN-MAX' ou --range KEY=MIN-MAX répétable, devis désquotées, raisons out-of-range/non-numeric, gates --check exit 2, JSON, stdin, 17 tests) ✓ 2026-08-03
+- [x] markdown-list-marker-consistency : vérifie la cohérence du marqueur de listes à puces (-/*/+ ; dominant inféré ou --marker forcé, égalités départagées par première apparition, fences ignorées, listes ordonnées/tâches ok, gates --check exit 2, JSON, stdin, 14 tests) ✓ 2026-08-03
+
 ## Vague 672 — CLI Tools (texte, lignes, env, URLs, CSV)
 - [x] text-dedupe-lines-stable : déduplique les lignes en gardant la première occurrence (ordre stable, --ignore-case/--strip, --keep-blank-duplicates, --count, --in-place, gates --check/--require-dupes/--max-dupes exit 2, JSON, 20 tests) ✓ 2026-08-03
 - [x] line-trailing-ws-check : détecte/supprime les espaces/tabulations en fin de ligne (CRLF-aware, --tabs-only/--spaces-only/--min-run/--blank-is-clean, --show marqueurs visibles, --strip/-o/--in-place, gates --check/--max-findings/--require-findings exit 2, JSON, 21 tests) ✓ 2026-08-03

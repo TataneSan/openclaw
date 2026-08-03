@@ -1,5 +1,19 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 656 — CLI Tools (CSV, env, JSON, Markdown, lignes)
+- [x] csv-sniff-dialect : détecte le dialecte CSV (délimiteur par score fréquence/consistance + sniffer stdlib fallback, quotechar/escape/doublequote/skipinitialspace, header, confidence, snippet csv.reader, gates --expect-* --min-confidence --check exit 2, JSON, 9 tests) ✓ 2026-08-03
+- [x] env-shell-quote : quote les valeurs .env pour un source shell sûr (POSIX shlex/fish, valeurs sûres inchangées, export/commentaires/ordre préservés, --check/--require-changes/--max-changes exit 2, --list, JSON, 16 tests) ✓ 2026-08-03
+- [x] json-stream-pretty : pretty-print JSON ou JSONL auto-détecté (indent/compact/sort-keys/ensure-ascii, JSONL forcé, lignes invalides tolérées ou --strict, --check/--require-change exit 2, JSON stderr, 14 tests) ✓ 2026-08-03
+- [x] markdown-blank-run-report : rapporte/collapse les runs de lignes vides Markdown (LINE:LENGTH, fences ```/~~~ protégées, --fix --collapse-to, gates --check/--max-run/--max-runs/--max-blank-lines/--require-runs exit 2, JSON, 12 tests) ✓ 2026-08-03
+- [x] line-repeat-count : compte les occurrences de chaque ligne sur tout l'input (uniq -c sans tri, ordres input/alpha/count/count-desc, filtres --duplicates-only/--unique-only/--min/--max-count, --ignore-case/--strip/--skip-empty, gates --check/--min-unique/--max-unique/--require-duplicates exit 2, JSON, 16 tests) ✓ 2026-08-03
+
+## Vague 655 — CLI Tools (Markdown, CSV, env, texte)
+- [x] csv-stats-json : statistiques par colonne CSV en JSON (count/min/max/sum/mean/median/stdev/Q1/Q3, délimiteur auto, --columns, --sample, --round, gates --require-numeric/--require-min-rows exit 2, 8 tests) ✓ 2026-08-03
+- [x] env-merge-files : fusionne N fichiers .env (first/last-wins, --export, --sort, commentaires préservés, doublons trackés, gates --fail-on-duplicate/--require-non-empty exit 2, JSON, 8 tests) ✓ 2026-08-03
+- [x] line-number-lines : préfixe chaque ligne avec son numéro (start/step/width/sep, skip-blank, multi-fichiers + restart, --in-place, gates --max-lines/--require-lines exit 2, JSON, 7 tests) ✓ 2026-08-03
+- [x] text-indent-normalize : convertit indentation espaces⇆tabs (--to-tabs/--to-spaces, --width, reste conservé, LF/CRLF préservées, --in-place, gates --check/--require-clean exit 2, JSON, 9 tests) ✓ 2026-08-03
+- [x] markdown-toc-anchor-list : liste titres→anchors GitHub (ATX+setext, fences ignorées, slug dup suffix, --format tsv/json/toc, --min/--max-level, gates --require-headings/--strict-duplicates exit 2, JSON, 14 tests) ✓ 2026-08-03
+
 ## Vague 654 — CLI Tools (JSONL, Markdown, env, lignes)
 - [x] json-minify-lines : minifie chaque ligne JSONL (clés triées, --keep-order, --ensure-ascii, --skip-blank, --in-place, gates --check/--require-minified exit 2, JSON, 7 tests) ✓ 2026-08-03
 - [x] jsonl-compact : normalise un flux JSONL (compact, tri clés, CRLF, --strip-blank, --in-place, gates --check/--require-canonical exit 2, JSON, 9 tests) ✓ 2026-08-03

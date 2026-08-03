@@ -4296,6 +4296,13 @@ Push automatique après chaque outil.
 - [x] text-remove-comments : retire les lignes de commentaires et commentaires inline (#, //, -- marqueur custom, guillemets préservés, --check exit 2, JSON) ✓ 2026-08-03
 - [x] line-pad-width : pad/tronque chaque ligne à une largeur fixe (left/right/center, fill custom, --truncate, --check exit 2, JSON) ✓ 2026-08-03
 
+## Vague 609 — CLI Tools (texte, CSV, JSON, Markdown)
+- [x] text-char-classes : rapport des classes de caractères d'un texte (alpha/digit/punct/space/control/non-ascii, ratios, gates --require/--forbid/--min-ratio/--max-ratio exit 2, multi-fichiers, JSON) ✓ 2026-08-03
+- [x] csv-blank-rows : rapport et suppression des lignes vides d'un CSV (délimiteur auto, --ignore-whitespace, --strip, gates --check/--max-blank/--require-blank exit 2, JSON) ✓ 2026-08-03
+- [x] json-bool-stats : statistiques des booléens d'un document JSON (true/false, ratio, par chemin jq, --include-falsy-like pour 0/1 et strings, gates ratios/--forbid/--require-any exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-ref-links : rapport des liens de référence Markdown (usages [t][id]/[id][]/shortcut, définitions, unused/dangling, --unused/--dangling, gates --check* exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-heading-count : compte les titres Markdown par niveau (ATX + setext, fences ignorés, --outline, gates --require-h1-one/--no-skip/--min-max-total/--require-level exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 608 — CLI Tools (Markdown, texte, CSV, JSON, env)
 - [x] markdown-anchor-links : génère les slugs d'ancres GitHub pour les titres Markdown (fences ignorées, doublons suffixés, --toc, --check fragments exit 2, --strict-duplicates, JSON) ✓ 2026-08-03
 - [x] text-extract-dates : extrait et normalise les dates ISO/US/EU, mois long FR/EN (validation calendrier, --unique/--sort, --since/--until, --count, --format-stats, --check exit 2, JSON) ✓ 2026-08-03

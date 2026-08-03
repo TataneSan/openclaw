@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 606 — CLI Tools (JSON, CSV, texte, env, Markdown)
+- [x] json-path-rewrite : réécrit des valeurs scalaires par chemins dot/bracket (wildcards *, null quand pas de =, transforms upper/lower/trim/int/float/string, gates require-changed/require-path exit 2, JSON) ✓ 2026-08-03
+- [x] csv-quote-balance-check : détecte les guillemets doubles non fermés/stray dans un CSV (position ligne/col/char, délimiteur sniffé, gates min/max/require-clean exit 2, JSON) ✓ 2026-08-03
+- [x] text-word-freq-report : rapport de fréquence de mots (top-N, --min-len, --no-lowercase, stopwords en ligne ou @fichier, gates min/max-unique/total exit 2, JSON) ✓ 2026-08-03
+- [x] env-rename-prefix : renomme le préfixe de clés d'un .env (auto-détect premier segment, --only, dry-run/in-place, gates check/require-renamed exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-heading-promote : décale les titres ATX de N niveaux (clamp 1..6, fences préservés, --in-place, gates check exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 605 — CLI Tools (Markdown, CSV, texte, env, lignes)
 - [x] markdown-link-check-list : liste et valide les liens Markdown (inline, référence, autolink, bare URL, fences/code ignorés, gates check/require-links/min/max-count exit 2, JSON) ✓ 2026-08-03
 - [x] csv-column-reorder : réordonne les colonnes d'un CSV par nom ou index (header conservé, '...' pour le reste, délimiteurs sniffer/output, --check/require-columns exit 2, JSON) ✓ 2026-08-03

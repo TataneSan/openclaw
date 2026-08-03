@@ -4296,6 +4296,10 @@ Push automatique après chaque outil.
 - [x] text-remove-comments : retire les lignes de commentaires et commentaires inline (#, //, -- marqueur custom, guillemets préservés, --check exit 2, JSON) ✓ 2026-08-03
 - [x] line-pad-width : pad/tronque chaque ligne à une largeur fixe (left/right/center, fill custom, --truncate, --check exit 2, JSON) ✓ 2026-08-03
 
+## Vague 607 — CLI Tools (JSON, env, texte)
+- [x] json-null-stats : statistiques sur les valeurs null d'un document JSON (ratio NULL/1/0/0.0/""/"null", par chemin, --require-max-null exit 2, JSON) ✓ 2026-08-03
+- [x] env-value-validate : valide les valeurs d'un .env (règles URL/EMAIL/IP/PORT/BOOL/INT/HEX/BASE64/PATH, détection placeholders et secrets faibles, --strict exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 188 — CLI Tools (CSV & texte)
 - [x] csv-count-values : fréquence des valeurs d'une colonne CSV ✓ 2026-08-01
 - [x] csv-first-rows : garde les N premières lignes de données d'un CSV (head) ✓ 2026-08-01

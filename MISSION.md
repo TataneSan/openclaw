@@ -1,6 +1,14 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 637 — CLI Tools (CSV, Markdown, JSON, env, texte)
+- [x] csv-column-move : déplace/réordonne les colonnes d'un CSV (--move COL:first|last|N|before:|after:, --order complet, délimiteur auto, gates --check/--require-changed/--require-unchanged exit 2, JSON, stdin) ✓ 2026-08-03
+- [x] markdown-list-marker-normalize : uniformise les marqueurs de listes Markdown (bullets -/*/+, délimiteurs ordonnés . ou ), --renumber par niveau, fences préservées, --in-place, gates --check/--require-*/--max-changes exit 2, JSON) ✓ 2026-08-03
+- [x] json-bigint-report : rapporte les entiers dépassant une borne sûre (défaut 2**53-1 JS safe, chemins jq, --limit, --count/--paths-only, --sort value, gates --check/--max/--require-any/--require-none exit 2, JSON) ✓ 2026-08-03
+- [x] env-value-redact : masque les valeurs sensibles d'un .env (PASSWORD/SECRET/TOKEN/API_KEY..., quotes et commentaires préservés, placeholders tolérés, --style partial --keep, --allow, --in-place, gates --check/--require-redacted/--require-clean/--max-exposed exit 2, JSON) ✓ 2026-08-03
+- [x] text-line-truncate : tronque les lignes à une largeur fixe (caractères Unicode, tab expansion, marqueur ... dans le budget, --side right/left/center, --no-marker, --in-place, gates --check/--max-truncated/--require-* exit 2, JSON, -q) ✓ 2026-08-03
+
+
 ## Vague 636 — CLI Tools (CSV, JSON, texte, Markdown, env)
 - [x] csv-to-ndjson-config : convertit CSV en NDJSON selon schema declaratif JSON/TOML (selection/renommage columns, casts bool/int/float/null, decimal-comma, gates check/require-records/max-badrows exit 2, JSON, stdin, 18 tests) ✓ 2026-08-03
 - [x] json-array-index-report : rapport par index pour chaque array JSON (types/count/min/max/avg par index, jq paths, --path, gates check/require-array/max-index/no-empty exit 2, JSON, stdin, 18 tests) ✓ 2026-08-03

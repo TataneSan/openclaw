@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 652 — CLI Tools (Markdown, texte, JSON, INI)
+- [x] csv-quote-style-report : existant sur GitHub, dossier restauré depuis le remote (analyse du style de quoting CSV par cellule, délimiteur sniffé, 14 tests) ✓ 2026-08-03
+- [x] markdown-heading-blank-line-check : lint les lignes vides autour des titres Markdown (ATX + setext, front matter YAML/TOML/JSON, fences ignorées, HR/--- non confondues, --require-blank-before/after N, --fix/--in-place/-o, gates --check/--min-headings/--max-violations/--require-violations exit 2, JSON stderr, stdin, 26 tests) ✓ 2026-08-03
+- [x] text-trailing-spaces-report : rapport détaillé des espaces/tabulations trailing (kinds space/tab/mixed, max run + ligne, --list, --strip/--in-place/-o, multi-fichiers, CRLF préservées, gates --check/--max-dirty-lines/--max-trailing-chars/--require-dirty exit 2, JSON stderr, stdin, 23 tests) ✓ 2026-08-03
+- [x] json-scalar-type-validate : valide les types scalaires JSON/JSONL contre un contrat PATH=TYPE (string/number/integer/float/boolean/null, chemins $ + a.b + [] + [N], --require/--forbid/--require-exists, --scalar-counts par chemin généralisé, gates --check/--max-violations/--require-violations exit 2, JSON stdout, stdin, 30 tests) ✓ 2026-08-03
+- [x] ini-duplicate-key-check : détecte les clés dupliquées dans les sections INI (sections dupliquées, préambule global, séparateurs = et :, commentaires ;/#+inline, continuations indentées, --ignore-case/--values-too/--hide-values, gates --check/--max-duplicates/--require-duplicates exit 2, JSON stdout, stdin, 24 tests) ✓ 2026-08-03
+
 ## Vague 651 — CLI Tools (Markdown, texte, lignes, JSON)
 - [x] markdown-footnote-check : audite les footnotes Markdown (références [^id] sans définition, définitions inutilisées et doublons, fences/inline code ignorés, filtres --dangling-only/--unused-only, gates --check/--max-dangling/--max-unused/--require-footnotes exit 2, JSON stderr, stdin, 22 tests) ✓ 2026-08-03
 - [x] text-number-normalize : normalise l'écriture des nombres dans un texte (séparateur décimal dot/comma, milliers space/comma/dot/apostrophe/underscore/none, --decimals N, signes préservés, parseur manuel tolérant 1,234/3,14/1.234.567/1.5e3, --in-place/-o, gates --check/--require-change/--max-changes exit 2, JSON stderr, stdin, 29 tests) ✓ 2026-08-03

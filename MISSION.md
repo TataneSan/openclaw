@@ -1,6 +1,14 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 636 — CLI Tools (CSV, JSON, texte, Markdown, env)
+- [x] csv-to-ndjson-config : convertit CSV en NDJSON selon schema declaratif JSON/TOML (selection/renommage columns, casts bool/int/float/null, decimal-comma, gates check/require-records/max-badrows exit 2, JSON, stdin, 18 tests) ✓ 2026-08-03
+- [x] json-array-index-report : rapport par index pour chaque array JSON (types/count/min/max/avg par index, jq paths, --path, gates check/require-array/max-index/no-empty exit 2, JSON, stdin, 18 tests) ✓ 2026-08-03
+- [x] text-slug-batch : genere des slugs URL-safe en lot (NFKD transliteration, separator custom, max-length, dedup suffixes, --pairs, gates check/require-change/unchanged/unique exit 2, JSON, stdin, 28 tests) ✓ 2026-08-03
+- [x] markdown-todo-to-github-issue : extrait les - [ ] pending et genere des gh issue create (repo/label/assignee/milestone/title-prefix/body-template, gates check/require-pending/min-pending/require-done exit 2, JSON, stdin, 19 tests) ✓ 2026-08-03
+- [x] env-var-expand-tester : teste l'expansion de variables dans des templates (syntaxe $VAR/${VAR}:-default/:=/:/?:+, .env, -D inline, show-resolved/unresolved, gates check/require-expanded/require-unresolved exit 2, JSON, stdin, 26 tests) ✓ 2026-08-03
+
+
 ## Vague 635 - CLI Tools (Markdown, JSON, env, texte, URL)
 - [x] markdown-fence-indent-strip : retire une indentation commune des fences et de leur contenu (fences ``` et ~~~, nested lists 0-7 espaces, longest-common, info strings preservees, --in-place/-o, gates check/require-dirty/require-clean/max-shifted exit 2, JSON, 18 tests) OK 2026-08-03
 - [x] json-key-sort-rec : trie recursivement les cles de tous les objets d'un JSON/JSONL (ordre alphabetique, --ignore-case, arrays preserves, --compact, --in-place, gates check/require-changed/require-unchanged exit 2, JSON, 16 tests) OK 2026-08-03

@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 622 — CLI Tools (env, Markdown, JSON, URL, texte)
+- [x] env-whitespace-trim : détecte/corrige les espaces autour des valeurs .env (space-after-eq/trailing/around-quoted, quotes préservées, --write/--check exit 2, JSON, stdin, 18 tests) ✓ 2026-08-03
+- [x] markdown-horizontal-rule-report : rapport/normalise les séparateurs horizontaux Markdown (dash/star/underscore, spaced variants, fences skip, mixed=invalid, --normalize CHR --in-place, gates --check/--style exit 2, JSON, 12 tests) ✓ 2026-08-03
+- [x] json-comment-strip : supprime // et /* */ des JSONC (strings protégées, newlines préservées dans blocks, --check/--lint gates exit 2, --stats/--json, 12 tests) ✓ 2026-08-03
+- [x] url-userinfo-extract : extrait user/pass des URLs (password jamais brut par défaut: len+sha256(8), --show opt-in, URL sanitizée, bare-text regex, gates require-none/require-passwordless/min/max exit 2, JSON, 13 tests) ✓ 2026-08-03
+- [x] text-zero-width-chars : détecte/supprime les caractères invisibles Unicode (ZWSP/ZWJ/bidi/BOM/soft-hyphen, 20+ codepoints, line:col+nom, --strip/--in-place, --allow zwsp|zwj|bidi|bom aliases, --check exit 2, JSON, 10 tests) ✓ 2026-08-03
+
 ## Vague 621 — CLI Tools (texte, URL, Markdown, JSON, lignes)
 - [x] text-tab-space-mix : detecte/corrige le melange tabs/espaces dans l'indentation (rapport/mixed lines, --to tabs|spaces + --width, --in-place, gates --check exit 2, JSON) ✓ 2026-08-03
 - [x] url-host-extract : extrait et rapporte les hotes d'URLs (domaine/ipv4/ipv6, --unique/--count/--with-port/--family, gates require/forbid/check exit 2, JSON) ✓ 2026-08-03

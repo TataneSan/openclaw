@@ -1,5 +1,13 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 618 — CLI Tools (texte, INI, URL, Markdown, env)
+- [x] text-word-frequency-report : fréquence des mots (counts, ratios, density, gates require/forbid/min/max-count/unique/expect/density exit 2, JSON) ✓ 2026-08-03
+- [x] ini-merge-files : fusionne plusieurs INI (precedence first|last, DEFAULT optionnel, conflict report JSON, --check, gates require/max-conflicts exit 2) ✓ 2026-08-03
+- [x] url-scheme-swap : remplace le scheme d'URLs (--adjust-port mappe vieux→nouveau default, --strip-default-port, --from-scheme filtre, IPv6, gates check/require-changed/require-unchanged exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-link-protocol-stats : distribution des protocoles dans les liens Markdown (inline/ref/autolink/image, fences+front-matter+comments skippés, --bars, --per-kind, gates require/forbid-scheme/min/max-count/check exit 2, JSON) ✓ 2026-08-03
+- [x] text-paragraph-count-report : compte paragraphes et phrases (splitter abréviations/décimales), stats avg/median, histogram, gates min/max-paragraphs/sentences/require-avg-words exit 2, JSON ✓ 2026-08-03
+- [x] env-interpolate-values : expande ${VAR}/$VAR dans les .env (multi-fichiers --from, recursive, cycle detect, quotes/comments preservés, gates check/require-expanded exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 617 — CLI Tools (JSON, Markdown, URL, INI, texte)
 - [x] json-key-casing-check : valide le style de casse des clés JSON (camel/pascal/snake/screaming/kebab/lower/upper, chemins jq-style, --ignore, --unique-keys, --report keys|styles, --check --style exit 2, JSON) ✓ 2026-08-03
 - [x] markdown-trailing-space-double : détecte/ajoute/supprime les hard breaks Markdown (double espace en fin de ligne, fences préservées, --strip/--ensure/--in-place, --check present|required|clean exit 2, JSON) ✓ 2026-08-03

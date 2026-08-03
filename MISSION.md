@@ -1,5 +1,13 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 594 — CLI Tools (env, Markdown, texte, CSV, JSON, fichiers)
+- [x] env-inline-comment-strip : retire les commentaires inline ' #' des valeurs .env (quotes et \\# échappés respectés, --dry-run/--in-place, gates require-changed/require-unchanged exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-image-alt-list : liste les alt + URLs des images Markdown (![alt](url) et ![alt][ref], résolution des définitions, fences ignorés, gates require-resolved/require-alt/min/max-count exit 2, JSON) ✓ 2026-08-03
+- [x] text-title-case-fix : Title Case avec stop-words (a, an, the, of, ...) (acronymes et camelCase préservés, --no-stop-words, --check, gates require-changed/require-unchanged exit 2, JSON) ✓ 2026-08-03
+- [x] csv-row-select-by-index : sélectionne des lignes CSV par index/range (1-based, négatifs, --every/--first/--last, --all-except, gates require-selected/require-count exit 2, JSON) ✓ 2026-08-03
+- [x] json-escape-unicode : bascule JSON entre \\uXXXX échappé et UTF-8 brut (--unescape, --check escaped|unescaped exit 2, gates require-changed/require-unchanged, JSON stats) ✓ 2026-08-03
+- [x] file-extension-check : vérifie que les extensions correspondent au contenu magic-bytes (JPEG/PNG/ZIP/PDF/MP3/MP4/ELF/SQLite/texte, -r récursif, gates require-clean/max-mismatches exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 593 — CLI Tools (texte, CSV, env, Markdown, JSON)
 - [x] text-reverse-bytes : renverse l'ordre des octets (modes line/whole/words, hex dump, --check round-trip, gates require-palindrome/require-changed exit 2, JSON) ✓ 2026-08-03
 - [x] csv-row-shuffle-random : mélange aléatoirement les lignes d'un CSV (header préservé, --seed reproductible, --count N sampling, gates require-count/require-changed exit 2, JSON) ✓ 2026-08-03

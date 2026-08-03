@@ -1,6 +1,14 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 638 — CLI Tools (CSV, Markdown, URL, JSON)
+- [x] csv-empty-cell-report : rapporte les cellules vides d'un CSV (par colonne + total, --whitespace, --column ciblé, --row-details, délimiteur sniffé, gates --check/--max/--require-any/--require-column-nonempty exit 2, JSON, stdin) ✓ 2026-08-03
+- [x] markdown-strikethrough-extract : extrait les segments barrés ~~texte~~ (fences, inline code et échappés ignorés, line:col, --unique/--count/--text-only/--strip, gates --check/--require-min/--max-count exit 2, JSON, stdin) ✓ 2026-08-03
+- [x] url-subdomain-extract : extrait les sous-domaines d'URLs (TLDs composés co.uk/com.au gérés, --base, --depth, --with-url, --unique, IPv4/6 skippés, gates --check/--require-any/--require/--forbid exit 2, JSON, stdin) ✓ 2026-08-03
+- [x] json-array-of-objects-report : stats des arrays d'objets JSON/JSONL (chemins jq, union/intersection de clés, coverage par clé, matrice de types, --uniform-only, --path, --sort length, gates --check/--require-array/--require-path/--min/--max-arrays exit 2, JSON) ✓ 2026-08-03
+- [x] csv-line-ending-detect : détecte/convertit les fins de ligne LF/CRLF/CR (binaire-safe, mixed détaillé, final-newline manquant, --to + --in-place/-o, gates --style/--check/--require-final-newline exit 2, JSON, stdin) ✓ 2026-08-03
+
+
 ## Vague 637 — CLI Tools (CSV, Markdown, JSON, env, texte)
 - [x] csv-column-move : déplace/réordonne les colonnes d'un CSV (--move COL:first|last|N|before:|after:, --order complet, délimiteur auto, gates --check/--require-changed/--require-unchanged exit 2, JSON, stdin) ✓ 2026-08-03
 - [x] markdown-list-marker-normalize : uniformise les marqueurs de listes Markdown (bullets -/*/+, délimiteurs ordonnés . ou ), --renumber par niveau, fences préservées, --in-place, gates --check/--require-*/--max-changes exit 2, JSON) ✓ 2026-08-03

@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 629 — CLI Tools (JSON, env, CSV, lignes, Markdown)
+- [x] json-object-merge : fusion profonde de documents JSON (récursif, --arrays replace/concat, --compact, gates check/require-changed/require-key/min/max-keys exit 2, JSON, 20 tests) ✓ 2026-08-03
+- [x] env-export-prefix : ajoute/retire le préfixe 'export' des lignes .env (commentaires/indent/quotes préservés, --add/--strip/--in-place, gates check/require-export/forbid-export/min-exported/max-plain exit 2, JSON, 16 tests) ✓ 2026-08-03
+- [x] csv-quoted-fields-report : rapport des champs quotés d'un CSV (parse caractère par caractère, multi-ligne/échappements, délimiteur auto, par colonne + total, gates check/require-quoted/require-unquoted/min/max-quoted exit 2, JSON, 18 tests) ✓ 2026-08-03
+- [x] line-number-add : préfixe chaque ligne de son numéro (--start/--width zero-pad/--separator, --skip-blank/--blank-placeholder, détection déjà-numéroté, gates check/expect-lines/min/max-lines exit 2, JSON, 16 tests) ✓ 2026-08-03
+- [x] markdown-link-domain-report : rapport des domaines des liens Markdown (inline/ref/autolinks, fences+inline code ignorés, allow/forbid wildcards, gates check/require-domain/min/max-domains exit 2, JSON, 13 tests) ✓ 2026-08-03
+
 ## Vague 628 — CLI Tools (Markdown, JSON, env, lignes, URL)
 - [x] markdown-heading-level-shift : déplace les niveaux d'en-têtes ATX (# → ##..., promote/demote, clamp 1..6 avec comptage, fences ignorées, --by/--up/--down, --in-place/--output, gates check/require-changed/require-clamped/max-headings exit 2, JSON, 15 tests) ✓ 2026-08-03
 - [x] json-string-concat : concatène les valeurs string d'un JSON/JSONL avec séparateur configurable (walk récursif, --key à toute profondeur, --path a.b[0], --scalars/--include-keys/--per-doc, gates require-non-empty/require-match/max-strings exit 2, JSON, 20 tests) ✓ 2026-08-03

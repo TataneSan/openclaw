@@ -4296,6 +4296,14 @@ Push automatique après chaque outil.
 - [x] text-remove-comments : retire les lignes de commentaires et commentaires inline (#, //, -- marqueur custom, guillemets préservés, --check exit 2, JSON) ✓ 2026-08-03
 - [x] line-pad-width : pad/tronque chaque ligne à une largeur fixe (left/right/center, fill custom, --truncate, --check exit 2, JSON) ✓ 2026-08-03
 
+## Vague 608 — CLI Tools (Markdown, texte, CSV, JSON, env)
+- [x] markdown-anchor-links : génère les slugs d'ancres GitHub pour les titres Markdown (fences ignorées, doublons suffixés, --toc, --check fragments exit 2, --strict-duplicates, JSON) ✓ 2026-08-03
+- [x] text-extract-dates : extrait et normalise les dates ISO/US/EU, mois long FR/EN (validation calendrier, --unique/--sort, --since/--until, --count, --format-stats, --check exit 2, JSON) ✓ 2026-08-03
+- [x] csv-cell-length : statistiques de longueur par colonne (count/min/max/avg, délimiteur auto, --column, gates --min/--max exit 2, JSON) ✓ 2026-08-03
+- [x] json-array-length : rapport des longueurs de tous les arrays d'un document JSON (chemins jq-style, tri par taille/chemin, totaux, gates --min/--max/--require-non-empty/--require exit 2, JSON) ✓ 2026-08-03
+- [x] env-comment-strip : supprime ou rapporte les commentaires d'un .env (hash dans valeurs préservé, quotes respectées, --list/--comments-only/--in-place, --check exit 2, JSON) ✓ 2026-08-03
+- [x] csv-merge-columns : fusionne plusieurs colonnes d'un CSV en une seule (séparateur configurable, --append pour préserver, skip-empty par défaut, --check lignes vides exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 607 — CLI Tools (JSON, env, texte)
 - [x] json-null-stats : statistiques sur les valeurs null d'un document JSON (ratio NULL/1/0/0.0/""/"null", par chemin, --require-max-null exit 2, JSON) ✓ 2026-08-03
 - [x] env-value-validate : valide les valeurs d'un .env (règles URL/EMAIL/IP/PORT/BOOL/INT/HEX/BASE64/PATH, détection placeholders et secrets faibles, --strict exit 2, JSON) ✓ 2026-08-03

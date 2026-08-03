@@ -1,5 +1,13 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 659 — CLI Tools (hosts, timestamps, chmod, Makefiles, anagrammes)
+- [x] hosts-file-lint : lint /etc/hosts (invalid-ip, malformed-hostname, duplicate-entry/hostname avec shadowing, non-canonical-loopback, trailing-whitespace, missing-localhost v4/v6, --allow-duplicate-hostname, --ignore-missing-localhost, gates --check/--forbid/--max-findings exit 2, JSON, stdin, 17 tests) ✓ 2026-08-03
+- [x] timestamp-to-date : convertit timestamps Unix ⇄ dates ISO 8601 (auto-détection précision s/ms/us/ns par magnitude, --unit forcé, --tz UTC/+HH:MM/IANA, styles iso/utc/date/full, batch args+stdin, gates --strict/--require-conversions exit 2, JSON, 15 tests) ✓ 2026-08-03
+- [x] chmod-symbolic : évalue les expressions symboliques chmod (u+rwx,go-w,a=x, bits s/t/X, mode de base --from, chaîne rwx, --explain en clair, gate --expect exit 2, JSON, 22 tests) ✓ 2026-08-03
+- [x] makefile-target-list : liste et audite les cibles d'un Makefile (kinds, .PHONY, commentaires ##, taille des recettes, gates CI exit 2, JSON, 19 tests) ✓ 2026-08-03
+- [x] text-anagram-check : détecte les anagrammes (paires, groupes de classes, signatures triées, Unicode/casse normalisés, exit 2 pour les scripts, 16 tests) ✓ 2026-08-03
+
+
 ## Vague 658 — CLI Tools (env, Dockerfile, YAML, symlinks)
 - [x] ini-key-sort : trie les clés de chaque section INI (ordre sections préservé, commentaires attachés aux clés, stdin) ✓ 2026-08-03
 - [x] env-diff-check : compare les clés de .env contre une référence (.env.example), missing/extra/coverage, placeholders, valeurs jamais affichées par défaut, --allow-missing/--require-extras exit 2, JSON, stdin, 9 tests ✓ 2026-08-03

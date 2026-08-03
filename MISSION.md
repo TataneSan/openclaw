@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 601 — CLI Tools (texte, lignes, env, URL)
+- [x] text-strip-ansi-color : supprime les séquences ANSI (CSI couleurs, cursor, OSC, charset) d'un flux (--check exit 2, --count, --in-place, --json) ✓ 2026-08-03
+- [x] line-crop-range : rogne chaque ligne à une plage de colonnes (indices négatifs, --fill pad, --ellipsis, --check-length exit 2, --json) ✓ 2026-08-03
+- [x] env-quote-values : normalise le quoting des valeurs .env (strip/single/double/keep, --force, préservant export/commentaires, --check exit 2, --in-place, --json) ✓ 2026-08-03
+- [x] url-slug-sanitize : convertit en slugs URL-safe (translitération ASCII, --unicode, séparateur custom, --max-length, --check exit 2, --json) ✓ 2026-08-03
+- [x] text-find-repeated-words : liste les mots répétés > N fois (stopwords EN, --min-length, tri count/word, --top, --check exit 2, --json) ✓ 2026-08-03
+
 ## Vague 600 — CLI Tools (texte, lignes, fichiers, INI)
 - [x] text-uppercase-words : met en majuscules des mots ciblés (all, --keywords liste/fichier, --nth N, ignore-case, --no-change-check exit 2, JSON) ✓ 2026-08-03
 - [x] line-reverse-order : inverse l'ordre des lignes (tac, trailing newline préservé, assertions --expect-lines/--head-check/--tail-check exit 2, JSON) ✓ 2026-08-03

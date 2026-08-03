@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 649 — CLI Tools (INI, CSV, Markdown, texte, lignes)
+- [x] ini-value-dup-check : détecte les valeurs dupliquées entre clés/sections INI (commentaires inline stripping, --ignore-case/--trim, placeholders skippés, filtres --only-key/--ignore-key, --hide-values, gates --check/--max-dups/--max-occurrences/--require-dups exit 2, JSON, stdin, 23 tests) ✓ 2026-08-03
+- [x] csv-row-field-count-check : valide que chaque ligne CSV a le bon nombre de champs (référence header ou --expect, délimiteur sniffé, quoted fields, histogramme, gates --max-bad/--min-ratio/--require-rows exit 2, JSON, -q, stdin, 19 tests) ✓ 2026-08-03
+- [x] markdown-horizontal-rule-normalize : normalise les règles horizontales Markdown (---/***___, variantes espacées, fences/front matter/setext préservés, indent conservée, --style, --in-place/-o, gates --check/--require-change/--max-changes/--min-rules exit 2, JSON stderr, stdin, 22 tests) ✓ 2026-08-03
+- [x] text-tab-to-space : existant sur GitHub, dossier restauré depuis le remote (déjà publié 2026-08-02, 8 tests) ✓ 2026-08-03
+- [x] line-leading-zero-pad : padde les nombres des lignes avec des zéros (largeur fixe ou --auto-width, signe préservé, idempotent, --first, --pattern groupe num, CRLF préservées, gates --check/--require-change/--max-changes exit 2, JSON stderr, stdin, 23 tests) ✓ 2026-08-03
+
 ## Vague 648 — CLI Tools (INI, CSV, sentence, Markdown, line)
 - [x] ini-section-sort : trie alphabétiquement les sections d'un INI (section globale conservée en tête, corps de section préservé byte-for-byte, --ignore-case/--reverse, --check gate CI exit 2, --in-place/-o, JSON stderr, stdin, 19 tests) ✓ 2026-08-03
 - [x] csv-header-case-normalize : normalise la casse des en-têtes CSV (snake/camel/pascal/kebab/lower/upper/title, splitting camel+snake+espaces, délimiteur auto, collisions détectées ou suffixées _2, --only/--check/--dry-run gates exit 2, JSON stderr, stdin, 23 tests) ✓ 2026-08-03

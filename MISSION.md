@@ -2,6 +2,20 @@
 
 
 
+## Vague 669 — CLI Tools (env, CSV, nombres)
+- [x] env-set-defaults : injecte des valeurs par défaut pour les clés absentes d'un .env (additif, -d KEY=VALUE/--defaults-file, export/--quote, gates --check/--require-existing/--require-added/--max-added exit 2, JSON, 12 tests) ✓ 2026-08-03
+- [x] env-prefix-add : préfixe les clés d'un .env (idempotent, export/commentaires préservés, collisions détectées, --separator, --strict, gates --check/--require-rename/--max-renames exit 2, JSON, 14 tests) ✓ 2026-08-03
+- [x] csv-row-shuffle-seed : mélange reproductible des lignes d'un CSV (seed string, header conservé, délimiteur sniffé, BOM, --no-header, --list-permutation, gates --check/--require-changed/--max-rows exit 2, JSON, 12 tests) ✓ 2026-08-03
+- [x] csv-move-column : déplace une colonne CSV (nom ou #index, --first/--last/--index/--before/--after, --no-header, gates --check/--require-changed exit 2, JSON, 15 tests) ✓ 2026-08-03
+- [x] text-extract-numerics : extrait les nombres d'un texte (décimaux EU/US, séparateurs de milliers, --signed/--integers/--scientific, --positions ligne:col, --stats, gates --check/--require/--max-count exit 2, JSON, 16 tests) ✓ 2026-08-03
+
+## Vague 668 — CLI Tools (env, lignes, JSONL, fichiers, CSV)
+- [x] env-group-prefixes : groupe les clés .env par préfixe (avant le premier underscore, export toléré, --keys-only, --sort name/count, gates --require-group/--require-prefix/--max-groups/--check exit 2, JSON, 9 tests) ✓ 2026-08-03
+- [x] text-line-stats-json : émet un objet JSON par ligne (n, longueur, mots, blank, --with-content, --hash md5/sha1/sha256, --pretty, gates --min-lines/--max-len/--require-non-empty exit 2, JSONL, 8 tests) ✓ 2026-08-03
+- [x] jsonl-to-csv-flat : aplatit JSONL en CSV (union des clés first-seen/--sort-columns, nesting dotted a.b.c, null->"", bool->true/false, --columns, gates --check/--require-column/--min-rows exit 2, JSON, 10 tests) ✓ 2026-08-03
+- [x] file-list-sizes : liste les fichiers d'un dossier avec tailles (tri size/name, -r récursif, --dirs, --human/--binary, --bytes-only, --top/--total, gates --require-files/--max-files exit 2, JSON, 8 tests) ✓ 2026-08-03
+- [x] csv-filter-not-eq : supprime les lignes CSV où une colonne vaut une valeur (--keep-eq inverse, nom/index, --ignore-case, BOM+sniff, gates --require-dropped/--require-remaining/--check exit 2, JSON, 8 tests) ✓ 2026-08-03
+
 ## Vague 667 — CLI Tools (JSON, Markdown, CSV, voyelles, tirages)
 - [x] json-empty-stats : rapport des valeurs vides d'un JSON (null/""/[]/{}, chemins jq-style --paths, tri count/path, multi-fichiers, gates --check/--max-empty exit 2, JSON, 10 tests) ✓ 2026-08-03
 - [x] markdown-list-done-move : descend les items cochés des task lists (bullets/numérotés, marques custom --done-marks/--open-marks, fences préservées, ordre relatif conservé, --in-place/--diff/--count, --check exit 2, JSON, 11 tests) ✓ 2026-08-03

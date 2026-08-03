@@ -1,6 +1,11 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 662 — CLI Tools (logs, crochets, niveaux)
+- [x] log-extract-paths : extrait chemins Unix/Windows/URLs/relatifs des logs (kinds, count, min-count, gates check/require exit 2, JSON, stdin, 13 tests) ✓ 2026-08-03
+- [x] paren-balance : vérifie équilibre () [] {} <> (mismatch/unclosed/unexpected, positions ligne:col, --lang py/js/c strings+commentaires ignorés, --max-issues, JSON, 13 tests) ✓ 2026-08-03
+- [x] log-level-count : compte les niveaux TRACE..FATAL (aliases normalisés, kv/bracket/plain, --ratio/--only, gates require-error/forbid-error/max-errors/max-warn-ratio exit 2, JSON, 16 tests) ✓ 2026-08-03
+
 ## Vague 661 — CLI Tools (timestamps, env, logs, Markdown, champs)
 - [x] text-extract-timestamps : extrait les timestamps ISO 8601/syslog/Apache/HH:MM:SS/epoch (filtres --kind, --unique, --count, --kind-stats, gates --check/--require exit 2, JSON, stdin) ✓ 2026-08-03
 - [x] json-to-env-vars : aplatit un JSON en lignes KEY=value (index/join/count pour arrays, --prefix, --export, --quote, --sort, --require, --check exit 2, JSON) ✓ 2026-08-03

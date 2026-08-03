@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 613 — CLI Tools (URL, JSON, texte, INI, lignes)
+- [x] url-strip-tracking-params : retire les paramètres de tracking des URLs (utm_*, fbclid, gclid, liste 60+ curée, --add/--remove/--only, gates check/require-changed/require-clean/min/max-removed exit 2, JSON) ✓ 2026-08-03
+- [x] json-min-max-value : min/max des valeurs numériques d'un JSON avec chemins jq-style (booleans exclus, --path subtree, --show-all, gates expect-min/max + min/max-floor/ceiling + require-any/min-count exit 2, JSON) ✓ 2026-08-03
+- [x] text-short-sentence-list : liste les phrases sous N mots (segmenteur à règles, abréviations Mr./e.g. et décimales protégées, --min-words, --numbered, gates check/require-short/min/max-count exit 2, JSON) ✓ 2026-08-03
+- [x] ini-section-rename-prefix : renomme les sections INI par préfixe (modes add/strip/replace, commentaires et ordre préservés, dry-run par défaut, --in-place/-o, --only, gates check/require-renamed/min/max exit 2, JSON) ✓ 2026-08-03
+- [x] line-first-uppercase-note : détecte les lignes ne débutant pas par une majuscule (marqueurs de liste skippés, --allow whitelist, --tally, gates check/require-found/max-count exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 606 — CLI Tools (JSON, CSV, texte, env, Markdown)
 - [x] json-path-rewrite : réécrit des valeurs scalaires par chemins dot/bracket (wildcards *, null quand pas de =, transforms upper/lower/trim/int/float/string, gates require-changed/require-path exit 2, JSON) ✓ 2026-08-03
 - [x] csv-quote-balance-check : détecte les guillemets doubles non fermés/stray dans un CSV (position ligne/col/char, délimiteur sniffé, gates min/max/require-clean exit 2, JSON) ✓ 2026-08-03
@@ -4302,6 +4309,9 @@ Push automatique après chaque outil.
 - [x] url-parse-parts : décompose des URLs (scheme/user/pass masqué/host/port/path/query/fragment, --field, --split-query, gates require/forbid-scheme + require-host + --check + --strict exit 2, JSON) ✓ 2026-08-03
 - [x] text-ascii-only : détecte/corrige les caractères non-ASCII (rapport ligne:col + codepoint + nom Unicode, --strip, --transliterate NFKD, --in-place, gates --check/--require-clean exit 2, JSON) ✓ 2026-08-03
 - [x] markdown-first-heading : vérifie que le premier contenu d'un Markdown est un titre H1 (ATX + setext, front matter YAML/TOML et comments HTML skippés, --show, exit 2, JSON) ✓ 2026-08-03
+
+## Vague 612 — CLI Tools (env)
+- [x] env-file-skeleton : génère un squelette .env.example à partir d'un .env réel (modes --empty/--placeholder/--describe avec REQUIRED/OPTIONAL via --optional-list KEY,KEY ou @fichier, commentaires inline préservés, --sort, --group par préfixe, --keep-safe + --check anti-leak exit 2, JSON, stdin) ✓ 2026-08-03
 
 ## Vague 611 — CLI Tools (JSON, CSV, Markdown, env)
 - [x] json-shallow-flatten : aplatit un niveau d'un objet JSON en clés jointes par séparateur (escape \, --no-escape, --compact, gates --check/--require-flat/--max-keys exit 2, JSON) ✓ 2026-08-03

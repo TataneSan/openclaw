@@ -1,6 +1,15 @@
 # OpenClaw — File d'attente des outils
 
 
+
+## Vague 666 — CLI Tools (fréquences casse, jointure CSV, JSONL, MAC, box, marqueurs)
+- [x] text-word-frequency-case : fréquences de mots avec variantes de casse (casefold grouped, dominant form, filtres min-length/min-count/top, sorts count/variants/alpha, gates check/require-variants/max-variants exit 2, JSON, 9 tests) ✓ 2026-08-03
+- [x] csv-join-key : jointure de deux CSV sur colonne clé (inner/left/right/full, colonnes nom ou #index, --right-on, suffixe collisions, délimiteur sniffé, BOM, gates require-matched/max-unmatched exit 2, JSON, stdin, 10 tests) ✓ 2026-08-03
+- [x] jsonl-split-lines : découpe un flux JSONL en chunks équilibrés (--parts N ou --size N, pattern -o {n}/{total}, markers stdout, validation --validate/--strict, gates require-parts/min-lines/max-line-errors exit 2, JSON, 10 tests) ✓ 2026-08-03
+- [x] env-sample-mac : génère un .env de fixtures MAC-48 (unicast LAA par défaut, --seed reproductible sha256, OUIs vendor apple/cisco/dell/intel/vmware, --oui custom, unicité garantie, --export/--lowercase, gates check/require-count exit 2, JSON, 12 tests) ✓ 2026-08-03
+- [x] text-box-draw : dessine un cadre autour d'un texte (styles ascii/single/double/rounded/heavy, --width wrap, --padding, align left/center/right, --title dans la bordure, gates max-width/min-lines exit 2, JSON, 11 tests) ✓ 2026-08-03
+- [x] markdown-marker-inject : injecte du contenu généré entre sentinelles <!-- NAME --> (création top/bottom si absent, fences ```/~~~ ignorées, --content/--content-file/stdin, --in-place, gates check/require-markers/max-replacements exit 2, JSON, 10 tests) ✓ 2026-08-03
+
 ## Vague 665 — CLI Tools (hostnames, caractères, JSON, Markdown, mots)
 - [x] log-extract-hostnames : extrait les hostnames des logs (FQDN RFC 1123, IPv4 --include-ips, shorts --include-short, --suffix, --count/--sort, gates check/require/max-unique/require-domain exit 2, JSON, stdin, 12 tests) ✓ 2026-08-03
 - [x] text-count-characters : compte les caractères par catégorie Unicode (letters/digits/spaces/punct/symbols/controls, ratios, ASCII/non-ASCII, histogramme --top, gates require-min/max-ratio + require-ascii + max-non-ascii exit 2, JSON, 9 tests) ✓ 2026-08-03

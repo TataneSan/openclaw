@@ -4296,6 +4296,13 @@ Push automatique après chaque outil.
 - [x] text-remove-comments : retire les lignes de commentaires et commentaires inline (#, //, -- marqueur custom, guillemets préservés, --check exit 2, JSON) ✓ 2026-08-03
 - [x] line-pad-width : pad/tronque chaque ligne à une largeur fixe (left/right/center, fill custom, --truncate, --check exit 2, JSON) ✓ 2026-08-03
 
+## Vague 611 — CLI Tools (JSON, CSV, Markdown, env)
+- [x] json-shallow-flatten : aplatit un niveau d'un objet JSON en clés jointes par séparateur (escape \, --no-escape, --compact, gates --check/--require-flat/--max-keys exit 2, JSON) ✓ 2026-08-03
+- [x] csv-infer-delimiter : infère le délimiteur d'un CSV (sniffer + score fréquence/consistance, --sample, --candidates, --name, --expect exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-code-lang-list : liste les langages des fences Markdown (``` et ~~~, comptages, --occurrences, gates require/forbid/min/max-langs + --check unclosed exit 2, JSON) ✓ 2026-08-03
+- [x] env-parse-json : convertit .env en JSON (export, quotes/échappements, commentaires inline, merge multi-fichiers, --prefix, --null-empty, gates strict/require-key/forbid-key exit 2, JSON) ✓ 2026-08-03
+- [x] env-cast-values : caste les valeurs .env en JSON typé (bool/int/float/null, --decimal-comma, --strings-only, --include-raw, --report, gates --check/--require-cast/--strict-keys exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 610 — CLI Tools (env, texte, CSV, Markdown)
 - [x] env-key-prefix-check : impose un préfixe sur les clés d'un .env (--allow, --strip pour corriger, exit 2, JSON) ✓ 2026-08-03
 - [x] text-repeated-chars : détecte les répétitions de caractères (aaa, ----, !!!) avec ligne:col, --min-run/--ignore/--only, gates --check/--max-run/--max-count exit 2, JSON ✓ 2026-08-03

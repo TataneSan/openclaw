@@ -4296,6 +4296,13 @@ Push automatique après chaque outil.
 - [x] text-remove-comments : retire les lignes de commentaires et commentaires inline (#, //, -- marqueur custom, guillemets préservés, --check exit 2, JSON) ✓ 2026-08-03
 - [x] line-pad-width : pad/tronque chaque ligne à une largeur fixe (left/right/center, fill custom, --truncate, --check exit 2, JSON) ✓ 2026-08-03
 
+## Vague 612 — CLI Tools (lignes, JSON, URL, texte, Markdown)
+- [x] line-longest-show : affiche les N lignes les plus longues (numéro:longueur:contenu, --max-width/--marker, --first-only, gates --check/--max-len/--min-len exit 2, JSON) ✓ 2026-08-03
+- [x] json-escape-check : valide l'échappement des strings JSON (lexer maison : échappements invalides, \u hex, surrogates orphelins, contrôles non-échappés, positions ligne:col, --check exit 2, JSON, tests unittest) ✓ 2026-08-03
+- [x] url-parse-parts : décompose des URLs (scheme/user/pass masqué/host/port/path/query/fragment, --field, --split-query, gates require/forbid-scheme + require-host + --check + --strict exit 2, JSON) ✓ 2026-08-03
+- [x] text-ascii-only : détecte/corrige les caractères non-ASCII (rapport ligne:col + codepoint + nom Unicode, --strip, --transliterate NFKD, --in-place, gates --check/--require-clean exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-first-heading : vérifie que le premier contenu d'un Markdown est un titre H1 (ATX + setext, front matter YAML/TOML et comments HTML skippés, --show, exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 611 — CLI Tools (JSON, CSV, Markdown, env)
 - [x] json-shallow-flatten : aplatit un niveau d'un objet JSON en clés jointes par séparateur (escape \, --no-escape, --compact, gates --check/--require-flat/--max-keys exit 2, JSON) ✓ 2026-08-03
 - [x] csv-infer-delimiter : infère le délimiteur d'un CSV (sniffer + score fréquence/consistance, --sample, --candidates, --name, --expect exit 2, JSON) ✓ 2026-08-03

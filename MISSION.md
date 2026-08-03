@@ -1,5 +1,13 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 593 — CLI Tools (texte, CSV, env, Markdown, JSON)
+- [x] text-reverse-bytes : renverse l'ordre des octets (modes line/whole/words, hex dump, --check round-trip, gates require-palindrome/require-changed exit 2, JSON) ✓ 2026-08-03
+- [x] csv-row-shuffle-random : mélange aléatoirement les lignes d'un CSV (header préservé, --seed reproductible, --count N sampling, gates require-count/require-changed exit 2, JSON) ✓ 2026-08-03
+- [x] env-prefix-strip-report : détecte/strippe/ajoute un préfixe commun sur les clés .env (détection par segments '_', modes report/strip/add, gates require-prefix/require-no-prefix exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-bold-text-extract : extrait les segments gras (**x** / __x__) avec positions (fences et inline code ignorés, gates min/max-count, require-none/style/text exit 2, JSON) ✓ 2026-08-03
+- [x] text-vowel-strip : retire les voyelles d'un texte (NFKD, --keep, --y-as-vowel, --stats, gates require-changed/require-unchanged/min/max-vowels exit 2, JSON) ✓ 2026-08-03
+- [x] json-compare-type-strict : comparaison profonde stricte de deux JSON (1≠1.0, true≠1, chemins $, --ignore-key, --ignore-array-order, --null-missing-ok, --require-different, exit 2 si diff, JSON) ✓ 2026-08-03
+
 ## Vague 592 — CLI Tools (texte, CSV, JSON, env, Markdown, INI, fichiers)
 - [x] text-palindrome-find : trouve mots palindromiques et plus long palindrome (normalisation NFKD, modes word/longest, --dedup, gates require-found/require-none/min/max-count exit 2, JSON) ✓ 2026-08-03
 - [x] csv-negative-values : localise les cellules numériques négatives d'un CSV (coords ligne/col, --columns, --allow-zero, gates require-none/require-found/max-count exit 2, JSON) ✓ 2026-08-03

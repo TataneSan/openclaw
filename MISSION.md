@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 617 — CLI Tools (JSON, Markdown, URL, INI, texte)
+- [x] json-key-casing-check : valide le style de casse des clés JSON (camel/pascal/snake/screaming/kebab/lower/upper, chemins jq-style, --ignore, --unique-keys, --report keys|styles, --check --style exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-trailing-space-double : détecte/ajoute/supprime les hard breaks Markdown (double espace en fin de ligne, fences préservées, --strip/--ensure/--in-place, --check present|required|clean exit 2, JSON) ✓ 2026-08-03
+- [x] url-port-default-strip : retire les ports par défaut des URLs (16 schémas built-in, --default-port custom, IPv6/userinfo/query/fragment préservés, --report, --check/require-changed exit 2, JSON) ✓ 2026-08-03
+- [x] ini-section-count-report : rapport de sections et clés INI (parser tolérant doublons/clés globales, --list, gates min/max-sections/keys + no-duplicates/no-empty/no-global exit 2, JSON) ✓ 2026-08-03
+- [x] text-vowel-ratio-report : ratios voyelles/consonnes avec folding accents NFD (--include-y, --per-line, --words N, gates min/max-ratio/expect-vowel/check exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 616 — CLI Tools (lignes, INI, Markdown, URL, JSON)
 - [x] line-collapse-multiple-blank : réduit les suites de lignes vides à N max (whitespace-only optionnel, --strip-trailing, --in-place/--output, gates check/require-blank exit 2, JSON) ✓ 2026-08-03
 - [x] ini-comment-char-detect : détecte les caractères de commentaire d'un INI (# / ;, full-line vs inline, mixte signalé, gates check/expect exit 2, JSON) ✓ 2026-08-03

@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 633 — CLI Tools (texte, Unicode, CSV, JSON, lignes)
+- [x] text-morse-codec : encode/decode du Morse international (symboles --dot/--dash custom, prosign SOS, --auto, --strict, gates --check round-trip/--require-encoded/--expect-encoded/--expect-unknown exit 2, JSON, 20 tests) ✓ 2026-08-03
+- [x] text-homoglyph-detect : détecte les caractères confusables (cyrillic/greek/fullwidth/math-bold, line:col + codepoint + name, --blocks/--sanitize/--unique, gates check/require/min/max/expect-char/forbid-block exit 2, JSON, 16 tests) ✓ 2026-08-03
+- [x] csv-row-select-regex : sélectionne les lignes CSV par regex sur champs (colonne nom/#index, AND multi-matchers, --any-column, --full-row, -i/-v, délimiteur sniffé, --count, gates check/min/max/expect-matches exit 2, JSON, 18 tests) ✓ 2026-08-03
+- [x] json-null-strip : retire récursivement les valeurs null des documents JSON/JSONL (--also empty-string/array/object, --prune-empty, --keep-root, --compact, gates check/require-changed/unchanged/expect/min/max-stripped exit 2, JSON, 16 tests) ✓ 2026-08-03
+- [x] line-duplicate-adjacent-remove : supprime les lignes dupliquées adjacentes (uniq streamé, -i/--trim, --count/--duplicates-only/--unique-only, CRLF préservées, --report-only, gates check/require/expect/min/max-duplicates/expect-lines exit 2, JSON, 19 tests) ✓ 2026-08-03
+
 ## Vague 632 — CLI Tools (texte, hex, lignes, emoji)
 - [x] text-acronym-maker : génère des acronymes depuis du texte (stopwords EN/FR, --title-case, gates --check/--require-min-length/--require-max-length exit 2, JSON) ✓ 2026-08-03
 - [x] hex-codec : encode/decode hex (--upper, --separator, --group, --decode, --auto, gates --check/--require-encoded exit 2, JSON) ✓ 2026-08-03

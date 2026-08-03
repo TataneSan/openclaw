@@ -1,6 +1,14 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 647 — CLI Tools (INI, JSON, lignes, Markdown, texte)
+- [x] ini-key-rename : renomme des clés INI globalement ou par section (règles [section:]old=new, fichier de règles, commentaires/quoting/ordre préservés, détection de collision, --in-place/-o, gates --check/--require-changed/--max-changes exit 2, JSON, stdin, 20 tests) ✓ 2026-08-03
+- [x] json-sort-arrays-rec : trie récursivement les arrays d'un JSON/JSONL (scalaires mixtes null/bool/int/str sûrs, objets par --key avec absents en fin, --path a.b[2], --reverse, compact, gates --check/--require-changed/--min/--max-arrays exit 2, JSON, stdin, 22 tests) ✓ 2026-08-03
+- [x] line-random-sample : échantillonne des lignes aléatoirement et reproductiblement (reservoir sampling --count N, Bernoulli --rate, --seed sha256-stable, ordre préservé ou --shuffle, gate --check sha256 exit 2 CI, --require-lines/--min/--max-sampled, JSON, stdin, 19 tests) ✓ 2026-08-03
+- [x] markdown-list-depth-clamp : audite ou réduit l'imbrication des listes Markdown à une profondeur max (bullets + ordonnées, GCD step adaptatif 2/3 espaces, fences ignorées, markers préservés, --in-place/-o, gates --check/--require-changed/--max-changes exit 2, JSON, stdin, 19 tests) ✓ 2026-08-03
+- [x] text-word-shift : décale cycliquement les mots de chaque ligne (gauche/droite, -n négatif inverse, --preserve-indent, identity no-op, gates --check/--require-changed/--min-words/--max-words exit 2, JSON, stdin, 18 tests) ✓ 2026-08-03
+
+
 ## Vague 646 — CLI Tools (JSON, lignes, Markdown, texte)
 - [x] json-deep-flatten : aplatit un JSON imbriqué en paires chemin=valeur et reconstruit (jq-style a.b[2], conteneurs vides préservés, --unflatten, gates --check/--require-leaves/--max-leaves exit 2, JSON, stdin, 10 tests) ✓ 2026-08-03
 - [x] line-reverse-lines : inverse l'ordre des lignes (tac portable, --chars graphemes combinants Unicode, --skip-blank, --in-place, gates --expect-lines/--max-lines/--check-reverse/--require-change exit 2, JSON, stdin, 12 tests) ✓ 2026-08-03

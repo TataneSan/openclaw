@@ -1,5 +1,13 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 589 — CLI Tools (env, CSV, texte, JSON, fichiers, Markdown)
+- [x] env-rename-keys : renommage en masse de clés .env (--map OLD=NEW, --prefix-find/--prefix-replace, préserve commentaires, gates require-key/forbid-key exit 2, JSON) ✓ 2026-08-03
+- [x] csv-dedup-rows : supprime lignes dupliquées d'un CSV par colonnes clés (keep first/last, --count, délimiteur sniffé, gates require-duplicates/require-none/max-dups exit 2, JSON) ✓ 2026-08-03
+- [x] text-line-length-histogram : histogramme des longueurs de lignes avec barres ASCII (bins, --bytes, stats min/max/mean/median, gates max-length/max-mean/require-lines exit 2, JSON) ✓ 2026-08-03
+- [x] json-array-intersect : opérations ensemblistes entre deux arrays JSON (intersect/union/diff/symdiff, --key dotted, gates require-overlap/require-disjoint/require-empty/min-max exit 2, JSON) ✓ 2026-08-03
+- [x] file-hard-link-report : détecte groupes de fichiers hard-linkés (même inode, espace partagé, --extensions, gates require-none/require-groups/min-saved exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-heading-levels : audit hiérarchie titres Markdown (sauts de niveau, H1 multiples, max-depth, fences ignorés, gates strict/require-h1/max-issues exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 588 — CLI Tools (JSON, CSV, Markdown, texte, fichiers)
 - [x] json-flatten-unflatten : aplati/ré-imbrique un JSON en clés a.b[i].c (sep custom, --unflatten, gates require-flattened/require-unchanged exit 2, JSON) ✓ 2026-08-03
 - [x] csv-null-stats : statistiques null/NA/vide par colonne et par ligne d'un CSV (delimiter sniffé, gates max-null-rate/require-row-complete exit 2, JSON) ✓ 2026-08-03

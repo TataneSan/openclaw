@@ -1,7 +1,7 @@
-1|1|# OpenClaw — File d'attente des outils
-2|2|
-3|3|
-4|4|## Vague 675 — CLI Tools (env, lignes, CSV, chiffres, booléens)
+# OpenClaw — File d'attente des outils
+
+
+## Vague 675 — CLI Tools (env, lignes, CSV, chiffres, booléens)
 - [x] env-url-components : décompose/valide les valeurs URL d'un .env (scheme/host/port/path/query/fragment, allow-list --schemes, ports invalides, export/quotes tolérés, gates --check/--require-url exit 2, JSON, stdin, 11 tests) ✓ 2026-08-03
 - [x] line-first-word-freq : fréquence du premier mot de chaque ligne (--lowercase/--strip-punct, tris count/alpha/first, --top, gates --require/--min-ratio exit 2, JSON, stdin, 10 tests) ✓ 2026-08-03
 - [x] csv-null-marker-stats : stats des marqueurs null-like CSV (NULL/n-a/-/None/\N/vide, par colonne + inventaire, --markers !replace, --ignore-case, gates --check/--max-null-ratio exit 2, JSON, stdin, 9 tests) ✓ 2026-08-03

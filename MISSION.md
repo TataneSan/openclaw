@@ -1,6 +1,13 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 665 — CLI Tools (hostnames, caractères, JSON, Markdown, mots)
+- [x] log-extract-hostnames : extrait les hostnames des logs (FQDN RFC 1123, IPv4 --include-ips, shorts --include-short, --suffix, --count/--sort, gates check/require/max-unique/require-domain exit 2, JSON, stdin, 12 tests) ✓ 2026-08-03
+- [x] text-count-characters : compte les caractères par catégorie Unicode (letters/digits/spaces/punct/symbols/controls, ratios, ASCII/non-ASCII, histogramme --top, gates require-min/max-ratio + require-ascii + max-non-ascii exit 2, JSON, 9 tests) ✓ 2026-08-03
+- [x] json-remove-key : supprime récursivement des clés d'un JSON (objets+arrays imbriqués, --key/--keys-from, --count/--list, gates check/require-removal exit 2, JSON rapport, 11 tests) ✓ 2026-08-03
+- [x] markdown-strip-formatting : convertit Markdown en texte pur (gras/italique/code/barré/liens/images/titres/quotes/listes, fences préservées, --diff/--in-place/--count, gate check exit 2, JSON, 10 tests) ✓ 2026-08-03
+- [x] text-word-extract-unique : extrait les mots uniques d'un texte (Unicode, contractions FR/EN, stopwords, filtres length/count, tris, diversité lexicale, gates check/require-min/max-unique exit 2, JSON, 11 tests) ✓ 2026-08-03
+
 ## Vague 664 — CLI Tools (UUIDs, Markdown, CSV)
 - [x] log-extract-uuids : extrait et audite les UUIDs des logs (canoniques + compactes --with-compact, normalisation lowercase, versions/variantes, --count/--unique/--stats, gates --check/--require/--max-unique exit 2, JSON, stdin, 11 tests) ✓ 2026-08-03
 - [x] markdown-url-decode : décode les URLs percent-encodées en Markdown (liens inline, ref-defs, URLs nues, fences/code inline protégés, --list/--in-place, gates --check/--require-encoded/--max-encoded exit 2, JSON, 13 tests) ✓ 2026-08-03

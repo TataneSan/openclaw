@@ -1,5 +1,14 @@
 # OpenClaw — File d'attente des outils
 
+
+## Vague 635 - CLI Tools (Markdown, JSON, env, texte, URL)
+- [x] markdown-fence-indent-strip : retire une indentation commune des fences et de leur contenu (fences ``` et ~~~, nested lists 0-7 espaces, longest-common, info strings preservees, --in-place/-o, gates check/require-dirty/require-clean/max-shifted exit 2, JSON, 18 tests) OK 2026-08-03
+- [x] json-key-sort-rec : trie recursivement les cles de tous les objets d'un JSON/JSONL (ordre alphabetique, --ignore-case, arrays preserves, --compact, --in-place, gates check/require-changed/require-unchanged exit 2, JSON, 16 tests) OK 2026-08-03
+- [x] env-key-validate : valide les noms de cles d'un .env (schemes UPPER_SNAKE/camel/snake ou custom regex, doublons detectes, export tolere, --allow, gates check/require-valid/min/max-invalid/no-duplicates exit 2, JSON, 19 tests) OK 2026-08-03
+- [x] text-tab2space : convertit tabs en espaces et reverse (tab-stops 4/8, --to-tabs compresse runs alignes, --leading-only, report ligne:shifted, --in-place/-o, gates check/require-clean/require-dirty/max-converted exit 2, JSON, 22 tests) OK 2026-08-03
+- [x] url-query-sort : trie les parametres de query string des URLs (par cle puis valeur, parsing decode-safe, --key-subset, --ignore-case, fragments/ports preserves, gates check/require-sorted/max-urls exit 2, JSON, 19 tests) OK 2026-08-03
+
+
 ## Vague 634 — CLI Tools (INI, texte, CSV, Markdown)
 - [x] ini-to-properties : convertit INI <-> Java .properties (round-trip, globs, --from-properties, --on-dupe rename/skip/error, --separator custom, gates check exit 2, JSON, 16 tests) ✓ 2026-08-03
 - [x] text-alt-case : alterne la casse des lettres SpOnGe CaSe (modes lower/upper-first, --random+--seed déterministe, Unicode-aware, --skip-digits/--punct-counts, --continuous/--reset-per-line, gates check exit 2, JSON, 18 tests) ✓ 2026-08-03

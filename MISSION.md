@@ -1,6 +1,13 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 644 — CLI Tools (Markdown, lignes, texte)
+- [x] markdown-list-flatten : aplatit les listes Markdown imbriquées sur un seul niveau (bullets/ordered, --style, --strip-marker, fences préservées, gates --check/--max-depth exit 2, JSON, stdin, 14 tests) ✓ 2026-08-03
+- [x] line-shuffle-sort : mélange aléatoire reproductible des lignes (--seed, --head échantillon, --unique, rapport stderr, gate --check ordre seedé exit 2, JSON, stdin, 10 tests) ✓ 2026-08-03
+- [x] text-number-lines-file : préfixe chaque ligne de son numéro (nl portable, --start/--step/--width/--sep, --skip-blank, gates --check/--max-line exit 2, JSON stderr, stdin, 10 tests) ✓ 2026-08-03
+
+
+
 ## Vague 643 — CLI Tools (INI, CSV, env, Markdown, texte)
 - [x] ini-comment-align : aligne les commentaires trailing ;/# des fichiers INI sur une colonne commune (blocs séparés par sections/blancs/commentaires pleine ligne, --min-gap, --in-place/-o, gates --check/--require-dirty/--max-changes exit 2, JSON, stdin, 18 tests) ✓ 2026-08-03
 - [x] csv-column-dedupe-rename : détecte et renomme les en-têtes CSV dupliqués (styles suffix/prefix/index-1, sniffing hors-quotes, quoting et whitespace des cellules préservés, --ignore-case, gates --check/--max-renames exit 2, JSON, stdin, 22 tests) ✓ 2026-08-03

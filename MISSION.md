@@ -1,5 +1,13 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 630 — CLI Tools (JSON, texte, lignes, Markdown, INI)
+- [x] json-pretty-compact : pretty-print/compacte des documents JSON et JSONL (validation, --indent, 12 tests) ✓ 2026-08-03
+- [x] ini-to-env : convertit des fichiers INI en .env (sections préfixées, --flat/--prefix/--upper, Go) ✓ 2026-08-03
+- [x] text-base64-codec : encode/decode Base64/Base64URL/Base32 (auto-détection, --wrap, --no-padding, check exit 2, JSON, 18 tests) ✓ 2026-08-03
+- [x] text-slug-words : génère des slugs URL-friendly (translittération accents, stopwords, --unique suffixes, --check exit 2, JSON, 20 tests) ✓ 2026-08-03
+- [x] line-length-histogram : distribution des longueurs de lignes (buckets, barres ASCII, stats, gate --max-length exit 2, JSON, 14 tests) ✓ 2026-08-03
+- [x] markdown-strip-links : retire la syntaxe des liens Markdown en gardant le texte (inline/ref/images/autolinks, fences préservées, --in-place, --check exit 2, JSON, 20 tests) ✓ 2026-08-03
+
 ## Vague 629 — CLI Tools (JSON, env, CSV, lignes, Markdown)
 - [x] json-object-merge : fusion profonde de documents JSON (récursif, --arrays replace/concat, --compact, gates check/require-changed/require-key/min/max-keys exit 2, JSON, 20 tests) ✓ 2026-08-03
 - [x] env-export-prefix : ajoute/retire le préfixe 'export' des lignes .env (commentaires/indent/quotes préservés, --add/--strip/--in-place, gates check/require-export/forbid-export/min-exported/max-plain exit 2, JSON, 16 tests) ✓ 2026-08-03

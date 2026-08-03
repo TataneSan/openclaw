@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 615 — CLI Tools (lignes, env, Markdown, URL, texte)
+- [x] line-most-frequent-show : affiche les N lignes les plus fréquentes (sort|uniq -c|sort -rn en un outil, --exact/--ignore-case/--skip-blank, --least/--alpha, gates check/require-duplicates/min/max-count/expect-line exit 2, JSON) ✓ 2026-08-03
+- [x] env-boolean-values-only : valide les valeurs booléennes d'un .env (true/false/yes/no/on/off/1/0, --key ciblé, quotes/export tolérés, --strict-case, --tokens custom, gates require-key/expect-value exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-code-block-lang-stats : stats par langage des blocs de code fenced (``` et ~~~, alias normalisés, barres ASCII, fences non fermées détectées, gates check/require-lang/forbid-lang/min/max-blocks exit 2, JSON) ✓ 2026-08-03
+- [x] url-host-swap : remplace le host d'URLs (userinfo/port/path/query/fragment préservés, --scheme, port keep/drop, dry-run --check, gates require-changed/require-unchanged exit 2, JSON) ✓ 2026-08-03
+- [x] text-acrostic-extract : extrait le mot acrostiche des premières lettres de lignes (--position N colonne, --strip-prefix, --lower/--strip-diacritics/--letters-only, --show-lines, gates check/expect-word/min/max-length exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 614 — CLI Tools (lignes, INI, URL, env, Markdown)
 - [x] line-shortest-show : affiche les N lignes les plus courtes (lineno:length:content, --skip-blank/--blank-only/--first-only, gates check/min-len/max-len exit 2, JSON) ✓ 2026-08-03
 - [x] ini-keys-in-multiple-sections : détecte les clés INI présentes dans 2+ sections (--ignore-case, --sections-only, gates check/require-duplicates/min/max-count/expect-key exit 2, JSON) ✓ 2026-08-03

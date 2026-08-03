@@ -1,5 +1,14 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 657 — CLI Tools (bases, logs, Docker, durées, gitignore, stack traces)
+- [x] radix-convert : convertit des entiers entre bases 2..36 (auto 0x/0o/0b, pad, upper, batch stdin/fichier, --strict exit 2, JSON, 11 tests) ✓ 2026-08-03
+- [x] stack-trace-summarize : groupe et classe les stack traces répétées d'un log (normalisation lignes/hex/ids, --top, --top-frames, gates --require-traces/--max-unique exit 2, JSON, 7 tests) ✓ 2026-08-03
+- [x] dockerfile-lint-scan : lint statique de Dockerfile (latest, root, curl|sh, sudo, pip/apt non pinnés, 12 règles, --list-rules, --check/--max-findings exit 2, JSON, 11 tests) ✓ 2026-08-03
+- [x] duration-round-normalize : normalise et arrondit des durées humaines (90min→1h30m, ISO 8601, round-to s/m/h/d up/down/nearest, formats compact/long/iso/seconds, --strict exit 2, JSON, 17 tests) ✓ 2026-08-03
+- [x] log-level-report : compte les niveaux de logs d'un flux (syslog/logfmt/bracket/bare, aliases, barres ASCII, samples, erreurs ratio, gates --require-clean/--max-errors/--max-error-ratio/--require-min-level exit 2, JSON, 12 tests) ✓ 2026-08-03
+- [x] gitignore-lint-check : lint .gitignore (duplicates, trailing-space, bare-star, negation-shadowed, CRLF, 8 règles, multi-fichiers, --check/--max-findings exit 2, JSON, 12 tests) ✓ 2026-08-03
+
+
 ## Vague 656 — CLI Tools (CSV, env, JSON, Markdown, lignes)
 - [x] csv-sniff-dialect : détecte le dialecte CSV (délimiteur par score fréquence/consistance + sniffer stdlib fallback, quotechar/escape/doublequote/skipinitialspace, header, confidence, snippet csv.reader, gates --expect-* --min-confidence --check exit 2, JSON, 9 tests) ✓ 2026-08-03
 - [x] env-shell-quote : quote les valeurs .env pour un source shell sûr (POSIX shlex/fish, valeurs sûres inchangées, export/commentaires/ordre préservés, --check/--require-changes/--max-changes exit 2, --list, JSON, 16 tests) ✓ 2026-08-03

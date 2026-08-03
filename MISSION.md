@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 628 — CLI Tools (Markdown, JSON, env, lignes, URL)
+- [x] markdown-heading-level-shift : déplace les niveaux d'en-têtes ATX (# → ##..., promote/demote, clamp 1..6 avec comptage, fences ignorées, --by/--up/--down, --in-place/--output, gates check/require-changed/require-clamped/max-headings exit 2, JSON, 15 tests) ✓ 2026-08-03
+- [x] json-string-concat : concatène les valeurs string d'un JSON/JSONL avec séparateur configurable (walk récursif, --key à toute profondeur, --path a.b[0], --scalars/--include-keys/--per-doc, gates require-non-empty/require-match/max-strings exit 2, JSON, 20 tests) ✓ 2026-08-03
+- [x] env-url-extract : extrait et valide les URLs des valeurs .env (scheme/host/port/path, IPv6, warnings userinfo/host manquant/port par défaut redondant, --values/--schemes/--key, gates require-url/require-scheme/forbid-userinfo/max-warnings/check exit 2, JSON, 18 tests) ✓ 2026-08-03
+- [x] line-rstrip-whitespace : rapporte/supprime les espaces/tabulations en fin de ligne (kinds space/tab/mixed, --strip/--in-place/-o, --kind filtre, EOL préservées, gates check/require-dirty/max-lines/max-chars exit 2, JSON, 17 tests) ✓ 2026-08-03
+- [x] url-punycode-convert : convertit les IDN d'URLs vers/depuis punycode (encode/decode par label, userinfo/port/path/fragment préservés, IPv6 ignoré, --host-only, gates require-changed/require-unchanged/check exit 2, JSON, 18 tests) ✓ 2026-08-03
+
 ## Vague 627 — CLI Tools (CSV, JSON, env, Markdown, texte)
 - [x] csv-validate-records : valide des règles par champ sur chaque enregistrement CSV (int/float/email/url/bool/notempty/empty/len:N-M/regex/in:, colonne par nom ou #index, délimiteur sniffé, --check/--strict/--require-invalid/--min/max-violations gates exit 2, JSON, 19 tests) ✓ 2026-08-03
 - [x] json-keys-type-map : cartographie le type de chaque clé JSON à travers les enregistrements (object/array/JSONL, chemins imbriqués + [], présence par clé racine, --path, gates --check/--require-key/--min-presence exit 2, JSON, 19 tests) ✓ 2026-08-03

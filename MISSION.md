@@ -1,5 +1,13 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 595 — CLI Tools (Markdown, JSON, texte, env, CSV, fichiers)
+- [x] file-sanitize-names : renomme récursivement les fichiers en noms sûrs/portables (lower, replace chars, strip accents NFKD, collapse dots, max-length, dry-run par défaut, --in-place, détection collisions/overwrite, --require-clean exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-toc-insert : insère/régénère une table des matières entre marqueurs <!-- toc --> (ancres slug GitHub, duplicatas suffixés -1, fences ignorés, --min/--max-depth, --ordered, --top, --check exit 2 CI, JSON) ✓ 2026-08-03
+- [x] json-get-path : extrait des valeurs JSON via chemins dot/bracket (index négatifs, segments quotés, multi-chemins, --compact/--raw/--null, --strict exit 2, JSON) ✓ 2026-08-03
+- [x] text-sentence-split-lines : découpe un texte en phrases, une par ligne (segmentation par règles, abréviations Mr./e.g./etc. protégées, décimales 3.14 protégées, ellipses, --numbered, --min-len, gates --min/--max-count exit 2, JSON) ✓ 2026-08-03
+- [x] env-file-diff : diff de deux fichiers .env (ajoutés/retirés/modifiés, --mask-value/--hash-values pour CI, --changed-only, --strict exit 2, JSON) ✓ 2026-08-03
+- [x] csv-column-slice : sélectionne/supprime des colonnes CSV par nom ou index (index négatifs, plages start:end, --drop, délimiteur auto, --no-header, --require-column exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 594 — CLI Tools (env, Markdown, texte, CSV, JSON, fichiers)
 - [x] env-inline-comment-strip : retire les commentaires inline ' #' des valeurs .env (quotes et \\# échappés respectés, --dry-run/--in-place, gates require-changed/require-unchanged exit 2, JSON) ✓ 2026-08-03
 - [x] markdown-image-alt-list : liste les alt + URLs des images Markdown (![alt](url) et ![alt][ref], résolution des définitions, fences ignorés, gates require-resolved/require-alt/min/max-count exit 2, JSON) ✓ 2026-08-03

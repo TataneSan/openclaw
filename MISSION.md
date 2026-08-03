@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 627 — CLI Tools (CSV, JSON, env, Markdown, texte)
+- [x] csv-validate-records : valide des règles par champ sur chaque enregistrement CSV (int/float/email/url/bool/notempty/empty/len:N-M/regex/in:, colonne par nom ou #index, délimiteur sniffé, --check/--strict/--require-invalid/--min/max-violations gates exit 2, JSON, 19 tests) ✓ 2026-08-03
+- [x] json-keys-type-map : cartographie le type de chaque clé JSON à travers les enregistrements (object/array/JSONL, chemins imbriqués + [], présence par clé racine, --path, gates --check/--require-key/--min-presence exit 2, JSON, 19 tests) ✓ 2026-08-03
+- [x] env-required-check : vérifie un .env contre un contrat de clés requises (--require/--require-file depuis .env.example, --forbid, --no-empty/--allow-empty, --no-placeholder/--strict, --unexpected, JSON, 18 tests) ✓ 2026-08-03
+- [x] markdown-bold-extract : extrait les segments gras **x**/__x__ (fences, inline code, échappés ignorés, line:col+style, non-fermés signalés, --unique/--count/--text-only, gates check/require-min/max-count/require-style/forbid-style/require-none exit 2, JSON, 21 tests) ✓ 2026-08-03
+- [x] text-ngram-freq : fréquences de n-grammes de mots ou caractères (Unicode, --documents avec DF, multi-fichiers, --top/--min-count/--sort, sorties table/CSV/JSON, gates require/forbid-ngram/max-unique exit 2, 20 tests) ✓ 2026-08-03
+
 ## Vague 626 — CLI Tools (texte, CSV, JSON, env, Markdown)
 - [x] text-word-order-reverse : inverse l'ordre des mots de chaque ligne (séparateur regex custom, --keep-blanks round-trip exact, --reverse-lines, --skip-blank, --in-place, gates check/require-changed/min/max-changed exit 2, JSON, 17 tests) ✓ 2026-08-03
 - [x] csv-distinct-per-column : compte les valeurs distinctes par colonne CSV (délimiteur sniffé, flags unique/constant, --ignore-case/--trim/--skip-empty, -c colonnes nom/index, --sort count/ratio, --top, gates min/max-distinct/require-unique/require-constant exit 2, JSON, 21 tests) ✓ 2026-08-03

@@ -1,6 +1,14 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 640 — CLI Tools (Markdown, JSON, env, CSV)
+- [x] markdown-image-alt-report : rapporte les images Markdown et audite leurs alt (fences/inline code ignorés, line:col, --fill placeholder, --missing-alt/--alts-only, gates --check/--max-missing/--require-any exit 2, JSON, stdin) ✓ 2026-08-03
+- [x] json-float-precision-report : audite les floats d'un JSON/JSONL (chemin jq, digits décimaux/significatifs, notation scientifique, budget --max-significant, gates --check/--max-count/--require-any/--forbid-scientific exit 2, JSON) ✓ 2026-08-03
+- [x] env-quote-normalize : rapporte et normalise le quoting des valeurs .env (none/single/double, escapes doubles quotes, commentaires/inline/export préservés, --style/--only-needed, --in-place/-o, gates --check/--require-style/--max-changes exit 2, JSON) ✓ 2026-08-03
+- [x] csv-add-row-numbers : ajoute une colonne de numérotation à un CSV (nom/position first-last-N, --start/--step, --no-header, délimiteur sniffé, gates --check-empty/--expect-rows exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-def-list-check : rapporte et lint les listes de définitions Markdown (Terme / : définition, orphelins et définitions vides, fences ignorées, --terms-only/--orphans-only, gates --check/--require-any/--max-orphans/--max-empty exit 2, JSON) ✓ 2026-08-03
+
+
 ## Vague 639 — CLI Tools (CSV, Markdown, env, JSON, texte)
 - [x] csv-column-type-detect : infère le type de chaque colonne CSV (bool/int/float/date/datetime/email/url/uuid/string, délimiteur auto, distribution par type, gates --expect COL=TYPE/--check exit 2, JSON, stdin) ✓ 2026-08-03
 - [x] markdown-list-indent-report : rapporte et lint l'indentation des listes Markdown (bullets + ordonnées, fences/inline code ignorés, depth par --step, sauts de niveau détectés, tabs expandés, gates --check/--max-depth exit 2, JSON, stdin) ✓ 2026-08-03

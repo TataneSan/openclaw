@@ -1,5 +1,13 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 590 — CLI Tools (JSON, fichiers, Markdown, texte)
+- [x] json-pick-paths : extrait des chemins dotted (a.b[0].c) d'un document JSON (--each-separate, --missing empty|null|fail exit 2, gates require-path, JSON) ✓ 2026-08-03
+- [x] file-extension-stats : stats d'extensions d'un dossier (compte, octets, --top, --sort count|bytes|name, gates max-total-bytes/max-files exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-link-rewrite : réécrit les URLs des liens/images Markdown et refs (--find/--replace regex, --base-prefix, --strip-prefix, --in-place, --dry-run, gates require-rewritten/require-unchanged exit 2, JSON) ✓ 2026-08-03
+- [x] json-key-rename-case : renomme récursivement les clés JSON (--to snake|camel|pascal|kebab|upper|lower, collisions, --dry-run, gates require-renamed/require-unchanged exit 2) ✓ 2026-08-03
+- [x] file-mime-report : rapport de catégories MIME par magic bytes (image/audio/video/archive/document/text/code/data, --json, gates min-files/max-unknown exit 2) ✓ 2026-08-03
+- [x] text-whitespace-visual : visualise espaces/tabs/EOL (--show-tabs, --show-spaces, --show-eol, --show-trailing, --expand-tabs, gates require-clean exit 2, --stats, JSON) ✓ 2026-08-03
+
 ## Vague 589 — CLI Tools (env, CSV, texte, JSON, fichiers, Markdown)
 - [x] env-rename-keys : renommage en masse de clés .env (--map OLD=NEW, --prefix-find/--prefix-replace, préserve commentaires, gates require-key/forbid-key exit 2, JSON) ✓ 2026-08-03
 - [x] csv-dedup-rows : supprime lignes dupliquées d'un CSV par colonnes clés (keep first/last, --count, délimiteur sniffé, gates require-duplicates/require-none/max-dups exit 2, JSON) ✓ 2026-08-03

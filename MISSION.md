@@ -1,6 +1,14 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 641 — CLI Tools (texte, env, Markdown, JSON)
+- [x] text-whitespace-class : détecte et corrige les espacements Unicode exotiques (NBSP, ideographic, zero-width, line:col + codepoint + nom, --fix, gates --check/--max-exotic exit 2, JSON, stdin) ✓ 2026-08-03
+- [x] env-multiline-check : audite les .env multilignes (valeurs quotées multi-lignes, quotes non fermées, continuations backslash, lignes orphelines, gates --check/--require-multiline/--max-issues exit 2, JSON, stdin) ✓ 2026-08-03
+- [x] markdown-list-todo : audite les task lists Markdown (- [ ] / [x] / [~] / [>] / [-], fences ignorées, filtres --open-only/--done-only/--state, gates --check/--require-any/--max-open/--max-done exit 2, JSON, stdin) ✓ 2026-08-03
+- [x] text-replace-many : applique N règles FIND=REPLACE (plain/regex avec backrefs, -i, fichier de règles, --in-place, --report, gates --require-change/--check-no-match exit 2, JSON, stdin) ✓ 2026-08-03
+- [x] json-int-range : audite les magnitudes d'entiers JSON/JSONL (min/max par chemin jq, ranges uint32/int32/int53/int64/uint64, note bignum, gates --check/--require-range/--max-out-of-range exit 2, JSON) ✓ 2026-08-03
+
+
 ## Vague 640 — CLI Tools (Markdown, JSON, env, CSV)
 - [x] markdown-image-alt-report : rapporte les images Markdown et audite leurs alt (fences/inline code ignorés, line:col, --fill placeholder, --missing-alt/--alts-only, gates --check/--max-missing/--require-any exit 2, JSON, stdin) ✓ 2026-08-03
 - [x] json-float-precision-report : audite les floats d'un JSON/JSONL (chemin jq, digits décimaux/significatifs, notation scientifique, budget --max-significant, gates --check/--max-count/--require-any/--forbid-scientific exit 2, JSON) ✓ 2026-08-03

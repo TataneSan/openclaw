@@ -1,5 +1,13 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 596 — CLI Tools (Markdown, lignes, fichiers, JSON, texte)
+- [x] markdown-code-block-extract : extrait les blocs de code fenced d'un Markdown (``` / ~~~, filtre --lang avec alias, --list, --with-fences, détection fences non fermées --check exit 2, gates require-blocks/require-lang/min/max-count, JSON) ✓ 2026-08-03
+- [x] line-prefix-numbers : préfixe chaque ligne d'un numéro (start/step/pad auto ou forcé, séparateur custom, --skip-blank, gates require-lines/min/max-lines exit 2, JSON stderr) ✓ 2026-08-03
+- [x] text-split-columns : découpe les lignes en champs (whitespace, -d délimiteur, --regex, --maxsplit, --select 1,3-4, -o délimiteur de sortie, gates require-fields/strict-ragged exit 2, JSON) ✓ 2026-08-03
+- [x] file-dedup-hash : détecte les fichiers dupliqués par hash de contenu (2 passes taille+hash, -r récursif, --algo, --min-size, --check exit 2, --delete --yes, wasted_bytes, JSON) ✓ 2026-08-03
+- [x] json-keys-diff : compare la structure de clés de deux JSON (chemins $.a.b[0], only-a/only-b/type-diff, --values scalaires, --quiet, --check exit 2, JSON) ✓ 2026-08-03
+- [x] text-word-wrap-justify : re-wrap un texte à largeur fixe avec justification optionnelle (paragraphes préservés, --width, --justify exact-width, --check mot trop long exit 2, JSON stderr) ✓ 2026-08-03
+
 ## Vague 595 — CLI Tools (Markdown, JSON, texte, env, CSV, fichiers)
 - [x] file-sanitize-names : renomme récursivement les fichiers en noms sûrs/portables (lower, replace chars, strip accents NFKD, collapse dots, max-length, dry-run par défaut, --in-place, détection collisions/overwrite, --require-clean exit 2, JSON) ✓ 2026-08-03
 - [x] markdown-toc-insert : insère/régénère une table des matières entre marqueurs <!-- toc --> (ancres slug GitHub, duplicatas suffixés -1, fences ignorés, --min/--max-depth, --ordered, --top, --check exit 2 CI, JSON) ✓ 2026-08-03

@@ -4,6 +4,7 @@
 - [x] text-detect-natural-language : détecte la langue naturelle d'un texte (en/fr/es/de/it/pt/nl, stopwords pondérés par exclusivité + chars/sequences typiques, confidence, --per-line, --languages, gates expect/min-words/min-confidence exit 2, JSON, 17 tests) ✓ 2026-08-03
 - [x] markdown-checklist-progress : calcule le pourcentage d'avancement des task lists Markdown (bullets - * +, nesting, case-insensitive X, barre ASCII/--width, badge shields, gates min-percent/expect exit 2, JSON, 14 tests) ✓ 2026-08-03
 - [x] json-pointer-delete : supprime des noeuds JSON via des pointers RFC 6901 (multi-pointers, ~0/~1 escapes, arrays, reset root avec "", --strict/--require-changed gates exit 2, report JSON stderr, 16 tests) ✓ 2026-08-03
+- [x] env-expand-paths : expande ~ et $VAR dans les valeurs path-like d'un .env (suffixes PATH/DIR/FILE/HOME/ROOT/BASE, --key-pattern custom, quotes/export preserves, --in-place/--output, gates check/require-expanded/require-key/require-no-undefined exit 2, JSON, 17 tests) ✓ 2026-08-03
 
 ## Vague 619 — CLI Tools (texte, JSON, Markdown, env, URL, lignes)
 - [x] text-palindrome-detect : détecte les palindromes (mode lignes ou mots, normalisation case/alnum/diacritics, --min-length, gates check/require/min/max-count/expect exit 2, JSON, tests) ✓ 2026-08-03

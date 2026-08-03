@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 634 — CLI Tools (INI, texte, CSV, Markdown)
+- [x] ini-to-properties : convertit INI <-> Java .properties (round-trip, globs, --from-properties, --on-dupe rename/skip/error, --separator custom, gates check exit 2, JSON, 16 tests) ✓ 2026-08-03
+- [x] text-alt-case : alterne la casse des lettres SpOnGe CaSe (modes lower/upper-first, --random+--seed déterministe, Unicode-aware, --skip-digits/--punct-counts, --continuous/--reset-per-line, gates check exit 2, JSON, 18 tests) ✓ 2026-08-03
+- [x] csv-repeat-rows : duplique les lignes CSV N fois (colonne compteur --count-column nom/index ou --times global, délimiteur sniffé, --keep-count-column, --max-repeats clamp, --error-on-invalid, gates check-empty/error exit 2, JSON, 19 tests) ✓ 2026-08-03
+- [x] ini-remove-section : supprime/garde des sections INI par nom ou glob (-s cache -s 'tmp-*', --keep inversé, préserve global/commentaires/blanks, collapses blank runs, gates check/allow-noop exit 2, JSON, 14 tests) ✓ 2026-08-03
+- [x] markdown-hr-normalize : normalise les règles horizontales Markdown vers --- (ou ***, ___, spaced variants, fences et setext-underlines préservées, CRLF ok, gates check exit 2, JSON, 15 tests) ✓ 2026-08-03
+
 ## Vague 633 — CLI Tools (texte, Unicode, CSV, JSON, lignes)
 - [x] text-morse-codec : encode/decode du Morse international (symboles --dot/--dash custom, prosign SOS, --auto, --strict, gates --check round-trip/--require-encoded/--expect-encoded/--expect-unknown exit 2, JSON, 20 tests) ✓ 2026-08-03
 - [x] text-homoglyph-detect : détecte les caractères confusables (cyrillic/greek/fullwidth/math-bold, line:col + codepoint + name, --blocks/--sanitize/--unique, gates check/require/min/max/expect-char/forbid-block exit 2, JSON, 16 tests) ✓ 2026-08-03

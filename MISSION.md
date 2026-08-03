@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 626 — CLI Tools (texte, CSV, JSON, env, Markdown)
+- [x] text-word-order-reverse : inverse l'ordre des mots de chaque ligne (séparateur regex custom, --keep-blanks round-trip exact, --reverse-lines, --skip-blank, --in-place, gates check/require-changed/min/max-changed exit 2, JSON, 17 tests) ✓ 2026-08-03
+- [x] csv-distinct-per-column : compte les valeurs distinctes par colonne CSV (délimiteur sniffé, flags unique/constant, --ignore-case/--trim/--skip-empty, -c colonnes nom/index, --sort count/ratio, --top, gates min/max-distinct/require-unique/require-constant exit 2, JSON, 21 tests) ✓ 2026-08-03
+- [x] json-numeric-sum-by-key : somme les valeurs numériques d'un JSON/JSONL regroupées par nom de clé (récursif, booléens exclus, --group-by dotted path sur docs/arrays racine, -k filtre, --sort/--ndigits, gates expect-sum/require-key/min/max-total/require-numeric exit 2, JSON, 19 tests) ✓ 2026-08-03
+- [x] env-default-comment : génère un .env.example où chaque valeur devient un commentaire '# default: ...' (secrets TOKEN/SECRET/PASSWORD/KEY auto-redactés, --extra-sensitive, --keep-value, --required, --check-safe avec --no-redact exit 2, gates require-key/min-keys, JSON, 17 tests) ✓ 2026-08-03
+- [x] markdown-list-item-count : compte les items de listes Markdown par section (ATX+Setext, preamble, ul/ol/task/done breakdown, fences ignorées, --section/--drop-empty/--types, gates require-lists/min/max-items/require-section exit 2, JSON, 18 tests) ✓ 2026-08-03
+
 ## Vague 625 — CLI Tools (CSV, Markdown, lignes, env, INI)
 - [x] csv-column-sort : trie les lignes d'un CSV par colonnes (nom/index, multi-clés stable, :n:numérique :d:descendant, délimiteur sniffé, --no-header, --check/--require-numeric/--require-unique/--min/max-rows exit 2, JSON, 26 tests) ✓ 2026-08-03
 - [x] markdown-italic-text-extract : extrait les segments italiques (*x* et _x_) d'un Markdown (fences, inline code, gras, échappés ignorés, line:col+style, --unique/--count/--text-only, gates min/max-count/require-style/require-text/require-none exit 2, JSON, 23 tests) ✓ 2026-08-03

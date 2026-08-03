@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 616 — CLI Tools (lignes, INI, Markdown, URL, JSON)
+- [x] line-collapse-multiple-blank : réduit les suites de lignes vides à N max (whitespace-only optionnel, --strip-trailing, --in-place/--output, gates check/require-blank exit 2, JSON) ✓ 2026-08-03
+- [x] ini-comment-char-detect : détecte les caractères de commentaire d'un INI (# / ;, full-line vs inline, mixte signalé, gates check/expect exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-list-normalize : normalise les puces Markdown vers un seul marqueur (-, *, +, fences ignorées, EOL/indent préservés, --in-place/--output, gate check exit 2, JSON) ✓ 2026-08-03
+- [x] url-query-extract-key : extrait les valeurs d'une clé de query-string depuis des URLs (--all, --ignore-case, --with-url, --unique, --empty-ok, gates check/require-all exit 2, JSON) ✓ 2026-08-03
+- [x] json-pretty-indent-width : ré-indente un JSON pretty (width N, --tabs, --compact) et détecte l'indentation (--detect-only, gates expect/require-compact/require-pretty exit 2, --sort-keys, JSON) ✓ 2026-08-03
+
 ## Vague 615 — CLI Tools (lignes, env, Markdown, URL, texte)
 - [x] line-most-frequent-show : affiche les N lignes les plus fréquentes (sort|uniq -c|sort -rn en un outil, --exact/--ignore-case/--skip-blank, --least/--alpha, gates check/require-duplicates/min/max-count/expect-line exit 2, JSON) ✓ 2026-08-03
 - [x] env-boolean-values-only : valide les valeurs booléennes d'un .env (true/false/yes/no/on/off/1/0, --key ciblé, quotes/export tolérés, --strict-case, --tokens custom, gates require-key/expect-value exit 2, JSON) ✓ 2026-08-03

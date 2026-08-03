@@ -1,6 +1,14 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 642 — CLI Tools (Markdown, texte, env)
+- [x] markdown-table-column-align : détecte et corrige la dérive des marqueurs d'alignement dans les tables Markdown (inférence type colonne, --expected NAME=ALIGN, --fix in-place, --check exit 2 CI, JSON, stdin, 7 tests) ✓ 2026-08-03
+- [x] markdown-frontmatter-lint : valide les blocs front-matter YAML/TOML/JSON (--require KEY, --forbid KEY, --type KEY=TYPE, --regex KEY=PATTERN, --allow-absent, exit 2 CI, JSON, stdin, 12 tests) ✓ 2026-08-03
+- [x] text-diacritics-strip : retire/remplace les diacritiques Unicode (NFKD, mapping compatibilité ß/æ/œ/ø/ð/þ, --keep-letters, --replace-compat, --check restes exit 2, --in-place, --report, JSON, stdin, 8 tests) ✓ 2026-08-03
+- [x] env-diff-compare : compare deux .env (clés uniques chaque côté, valeurs changées, --mask-values pour logs, --ignore/--ignore-prefix, --check exit 2 CI, JSON, 7 tests) ✓ 2026-08-03
+- [x] text-column-transpose : transpose lignes/colonnes de matrices texte (split whitespace ou --sep, --ragged-ok avec --fill, --out-sep, --require-input exit 2 CI, JSON, stdin, 7 tests) ✓ 2026-08-03
+
+
 ## Vague 641 — CLI Tools (texte, env, Markdown, JSON)
 - [x] text-whitespace-class : détecte et corrige les espacements Unicode exotiques (NBSP, ideographic, zero-width, line:col + codepoint + nom, --fix, gates --check/--max-exotic exit 2, JSON, stdin) ✓ 2026-08-03
 - [x] env-multiline-check : audite les .env multilignes (valeurs quotées multi-lignes, quotes non fermées, continuations backslash, lignes orphelines, gates --check/--require-multiline/--max-issues exit 2, JSON, stdin) ✓ 2026-08-03

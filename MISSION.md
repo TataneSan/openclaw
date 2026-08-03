@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 654 — CLI Tools (JSONL, Markdown, env, lignes)
+- [x] json-minify-lines : minifie chaque ligne JSONL (clés triées, --keep-order, --ensure-ascii, --skip-blank, --in-place, gates --check/--require-minified exit 2, JSON, 7 tests) ✓ 2026-08-03
+- [x] jsonl-compact : normalise un flux JSONL (compact, tri clés, CRLF, --strip-blank, --in-place, gates --check/--require-canonical exit 2, JSON, 9 tests) ✓ 2026-08-03
+- [x] markdown-list-renumber : renumérote les listes ordonnées Markdown (start/step, markers . ou ) préservés ou forcés, fences ignorées, --count dry-run, gates --check/--require-lists/--strict exit 2, JSON, 10 tests) ✓ 2026-08-03
+- [x] env-expand-vars : expansion $VAR et ${VAR} dans .env (défauts :-, alt :+, requis :?, fallback env, --prefix, --mask, --no-env, gates --check exit 2, JSON, 13 tests) ✓ 2026-08-03
+- [x] line-trim-whitespace : trim espaces début/fin de chaque ligne (LF/CRLF préservées, --leading/--trailing, --drop-empty, --in-place, gates --check/--require-clean exit 2, JSON, 8 tests) ✓ 2026-08-03
+
 ## Vague 653 — CLI Tools (texte, Markdown, env, JSON, CSV)
 - [x] text-soft-wrap-unwrap : joint les lignes soft-wrapped en paragraphes simples (listes/titres/fences/tables/code indenté préservés, --no-keep-structured, --in-place/-o, gates --check/--require-change/--max-joins exit 2, JSON stderr, stdin, 24 tests) ✓ 2026-08-03
 - [x] markdown-image-path-validate : valide l'existence des images locales référencées en Markdown (remotes/data: skippés, fences ignorées, fragment/query strip + URL-decode, résolutions relatives, --allow-missing/--require-images/--max-missing exit 2, JSON rapports, 21 tests) ✓ 2026-08-03

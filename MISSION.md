@@ -1,5 +1,22 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 592 — CLI Tools (texte, CSV, JSON, env, Markdown, INI, fichiers)
+- [x] text-palindrome-find : trouve mots palindromiques et plus long palindrome (normalisation NFKD, modes word/longest, --dedup, gates require-found/require-none/min/max-count exit 2, JSON) ✓ 2026-08-03
+- [x] csv-negative-values : localise les cellules numériques négatives d'un CSV (coords ligne/col, --columns, --allow-zero, gates require-none/require-found/max-count exit 2, JSON) ✓ 2026-08-03
+- [x] json-boolean-audit : audit et corrige les valeurs booléennes-alike d'un JSON ("yes", "true", 0/1 → true/false, --fix/--in-place, gates require-clean/require-changed/max-nonbool exit 2, JSON) ✓ 2026-08-03
+- [x] env-key-sort-check : vérifie/trie l'ordre alphabétique des clés .env (--fix/--in-place, --descending, --ignore-case, gates require-sorted/require-changed exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-footnote-audit : audit références/définitions de footnotes [^id] (fences ignorés, gates require-resolved/require-no-unused/max-issues exit 2, JSON) ✓ 2026-08-03
+- [x] text-emoji-report : rapporte les emoji d'un texte (positions, séquences ZWJ, variation selectors, --counts/--names, gates require-none/min/max-count exit 2, JSON) ✓ 2026-08-03
+- [x] csv-quoted-field-audit : audit style de quoting CSV (stats champs, quotes vagabonds, champs non terminés, délimiteur sniffé, gates require-clean/max-issues exit 2, JSON) ✓ 2026-08-03
+- [x] json-min-max-values : min/max des valeurs numériques d'un JSON avec dot paths (JSONL, gates require-numbers/require-in-range/require-none exit 2, JSON) ✓ 2026-08-03
+- [x] ini-value-duplicates : détecte les valeurs partagées entre clés d'un INI (--within-section, --ignore-case, gates require-none/max-groups exit 2, JSON) ✓ 2026-08-03
+- [x] file-symlink-scan : rapporte les symlinks d'un arbre (cibles, broken, outside root, gates require-none/require-broken/max-broken/require-no-outside exit 2, JSON) ✓ 2026-08-03
+- [x] csv-column-count-check : vérifie que chaque ligne CSV a le bon nombre de colonnes (lignes ragged, gates require-consistent/max-ragged exit 2, JSON) ✓ 2026-08-03
+- [x] env-value-length-report : longueur des valeurs .env multi-fichiers (tri length/key/line, --top, gates max-value-length/min-longest/require-keys exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-link-text-report : rapporte le texte visible des liens/images Markdown (placeholders "click here", texte vide, gates require-nonempty/require-no-placeholders exit 2, JSON) ✓ 2026-08-03
+- [x] ini-section-dump : dump sections d'un INI en format ini/json/env (--section répétable, gates require-section/min/max-sections exit 2) ✓ 2026-08-03
+- [x] text-capitalization-audit : classe les mots lower/title/upper/mixed et flag ALL-CAPS et miXeD (--allow-acronyms, gates require-clean/max-allcaps/max-mixed exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 591 — CLI Tools (CSV, JSON, texte, Markdown, env, INI)
 - [x] csv-stat-summary : stats numériques complètes par colonne CSV (count/min/max/mean/median/stdev, --no-header, --precision, gate --require-numeric exit 2, --json) ✓ 2026-08-03
 - [x] json-defaults-merge : merge récursif d'un JSON utilisateur sur des défauts (--no-deep, --ignore-null, --delete-null, gates --require-keys/--require-changed/--require-unchanged exit 2, --json) ✓ 2026-08-03

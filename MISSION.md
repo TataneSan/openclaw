@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 625 — CLI Tools (CSV, Markdown, lignes, env, INI)
+- [x] csv-column-sort : trie les lignes d'un CSV par colonnes (nom/index, multi-clés stable, :n:numérique :d:descendant, délimiteur sniffé, --no-header, --check/--require-numeric/--require-unique/--min/max-rows exit 2, JSON, 26 tests) ✓ 2026-08-03
+- [x] markdown-italic-text-extract : extrait les segments italiques (*x* et _x_) d'un Markdown (fences, inline code, gras, échappés ignorés, line:col+style, --unique/--count/--text-only, gates min/max-count/require-style/require-text/require-none exit 2, JSON, 23 tests) ✓ 2026-08-03
+- [x] line-duplicate-remove : supprime les lignes dupliquées en préservant l'ordre (uniq ordonné, -i/--trim/--collapse, --skip-blank, --duplicates-only/--count, --in-place, gates check/require-duplicates/min/max-removed/unique/expect-lines exit 2, JSON, 22 tests) ✓ 2026-08-03
+- [x] env-key-case-normalize : normalise la casse des clés .env (upper/lower/snake-upper/snake-lower, splitting camel/acronymes, valeurs/quotes/export/comments préservés, collisions détectées, --check/--dry-run/--in-place, gates require-changed/unchanged exit 2, JSON, 23 tests) ✓ 2026-08-03
+- [x] ini-value-type-detect : détecte le type apparent des valeurs INI (bool/int/float/empty/list2+/path/string, quotes tolérées, par section, conflits de type inter-sections, gates expect-key/require/forbid-type/no-conflicts exit 2, JSON, 24 tests) ✓ 2026-08-03
+
 ## Vague 624 — CLI Tools (JSON, lignes, Markdown)
 - [x] json-array-items : extrait les items d'un array JSON racine (JSONL auto, --index avec offsets négatifs, --unwrap single-key, --pretty, gates min/max/require-array/non-empty/scalars-only exit 2, JSON, 17 tests) ✓ 2026-08-03
 - [x] line-strip-suffix : retire un suffixe (ou une extension de fichier) de chaque ligne (--suffix, --ext, -i, --report/--count, gates require-match/min/max/require-none/expect exit 2, JSON, 17 tests) ✓ 2026-08-03

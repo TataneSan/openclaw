@@ -1,5 +1,11 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 648 — CLI Tools (INI, CSV, sentence, Markdown, line)
+- [x] ini-section-sort : trie alphabétiquement les sections d'un INI (section globale conservée en tête, corps de section préservé byte-for-byte, --ignore-case/--reverse, --check gate CI exit 2, --in-place/-o, JSON stderr, stdin, 19 tests) ✓ 2026-08-03
+- [x] csv-header-case-normalize : normalise la casse des en-têtes CSV (snake/camel/pascal/kebab/lower/upper/title, splitting camel+snake+espaces, délimiteur auto, collisions détectées ou suffixées _2, --only/--check/--dry-run gates exit 2, JSON stderr, stdin, 23 tests) ✓ 2026-08-03
+- [x] text-sentence-case-normalize : met une majuscule en tête de chaque phrase (protection abréviations Mr./e.g./etc. et décimales 3.14, --after-colon, --keep-caps pour acronymes, --check gate exit 2 CI, JSON stderr, stdin, 23 tests) ✓ 2026-08-03
+- [x] markdown-italic-marker-normalize : convertit les italiques Markdown _text_ ↔ *text* (bold **/__ préservé, inline `_var_` et fences ```/~~~ protégés, échappés ignorés, --to underscore, --check gate exit 2 CI, JSON stderr, stdin, 19 tests) ✓ 2026-08-03
+- [x] line-swap-case : inverse la casse de chaque lettre ligne par ligne (a⇄A idempotent, --lines 1,3,5-7 --invert, --word N 0-based, EOL LF/CRLF préservées, --require-change gate exit 2 CI, JSON stderr, stdin, 23 tests) ✓ 2026-08-03
 
 ## Vague 647 — CLI Tools (INI, JSON, lignes, Markdown, texte)
 - [x] ini-key-rename : renomme des clés INI globalement ou par section (règles [section:]old=new, fichier de règles, commentaires/quoting/ordre préservés, détection de collision, --in-place/-o, gates --check/--require-changed/--max-changes exit 2, JSON, stdin, 20 tests) ✓ 2026-08-03

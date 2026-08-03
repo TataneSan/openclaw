@@ -7,6 +7,8 @@
 - [x] file-dedup-hash : détecte les fichiers dupliqués par hash de contenu (2 passes taille+hash, -r récursif, --algo, --min-size, --check exit 2, --delete --yes, wasted_bytes, JSON) ✓ 2026-08-03
 - [x] json-keys-diff : compare la structure de clés de deux JSON (chemins $.a.b[0], only-a/only-b/type-diff, --values scalaires, --quiet, --check exit 2, JSON) ✓ 2026-08-03
 - [x] text-word-wrap-justify : re-wrap un texte à largeur fixe avec justification optionnelle (paragraphes préservés, --width, --justify exact-width, --check mot trop long exit 2, JSON stderr) ✓ 2026-08-03
+- [x] csv-transpose : transpose un CSV (lignes <-> colonnes, délimiteur auto-détecté, -o sortie, padding ragged, gates strict-ragged/require-square/min-rows exit 2, JSON stderr) ✓ 2026-08-03
+- [x] column-format-table : formate du texte en colonnes alignées (délimiteur auto, --header, --markdown avec align hints, --right-numeric, --max-width truncation, --strict-ragged exit 2, JSON stderr) ✓ 2026-08-03
 
 ## Vague 595 — CLI Tools (Markdown, JSON, texte, env, CSV, fichiers)
 - [x] file-sanitize-names : renomme récursivement les fichiers en noms sûrs/portables (lower, replace chars, strip accents NFKD, collapse dots, max-length, dry-run par défaut, --in-place, détection collisions/overwrite, --require-clean exit 2, JSON) ✓ 2026-08-03

@@ -4296,6 +4296,13 @@ Push automatique après chaque outil.
 - [x] text-remove-comments : retire les lignes de commentaires et commentaires inline (#, //, -- marqueur custom, guillemets préservés, --check exit 2, JSON) ✓ 2026-08-03
 - [x] line-pad-width : pad/tronque chaque ligne à une largeur fixe (left/right/center, fill custom, --truncate, --check exit 2, JSON) ✓ 2026-08-03
 
+## Vague 610 — CLI Tools (env, texte, CSV, Markdown)
+- [x] env-key-prefix-check : impose un préfixe sur les clés d'un .env (--allow, --strip pour corriger, exit 2, JSON) ✓ 2026-08-03
+- [x] text-repeated-chars : détecte les répétitions de caractères (aaa, ----, !!!) avec ligne:col, --min-run/--ignore/--only, gates --check/--max-run/--max-count exit 2, JSON ✓ 2026-08-03
+- [x] env-values-unique : détecte les clés .env partageant la même valeur (copy-paste, quotes normalisées, --include-empty, --allow-noop, --max-dup-groups exit 2, JSON) ✓ 2026-08-03
+- [x] csv-row-width-report : rapport du nombre de champs par ligne CSV (délimiteur auto, distribution, lignes irrégulières, --no-header, --ragged-only, --check/--max-ragged exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-link-text-caps : détecte les textes de liens Markdown en ALL-CAPS (acronymes tolérés, fences/inline code/images ignorés, --allow, --max exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 609 — CLI Tools (texte, CSV, JSON, Markdown)
 - [x] text-char-classes : rapport des classes de caractères d'un texte (alpha/digit/punct/space/control/non-ascii, ratios, gates --require/--forbid/--min-ratio/--max-ratio exit 2, multi-fichiers, JSON) ✓ 2026-08-03
 - [x] csv-blank-rows : rapport et suppression des lignes vides d'un CSV (délimiteur auto, --ignore-whitespace, --strip, gates --check/--max-blank/--require-blank exit 2, JSON) ✓ 2026-08-03

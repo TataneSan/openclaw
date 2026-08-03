@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 623 — CLI Tools (CSV, URL, JSON, Markdown, texte)
+- [x] csv-duplicate-row-find : trouve et rapporte les lignes dupliquées d'un CSV (comparaison exacte ou par clés --key nom/index, --ignore-case/--trim, --dedupe garde la 1re occurrence, delimiter sniffé, gates check/min/max/require-any/require-none exit 2, JSON, 15 tests) ✓ 2026-08-03
+- [x] url-fragment-extract : extrait les fragments #anchor des URLs (bare-text scan via regex inline, --decode percent, empty # distingué, scroll-to-text ':~:' directives, --unique/--count/--with-url, gates check/min/max/require/forbid exit 2, JSON, 14 tests) ✓ 2026-08-03
+- [x] json-array-length-report : rapporte la longueur de chaque tableau JSON avec chemins jq-style (JSONL, --include-empty, --sort path/length/desc, --stats, gates min-len/max-len/max-arrays/require-non-empty/require-path exit 2, JSON, 15 tests) ✓ 2026-08-03
+- [x] markdown-heading-word-count : compte les mots par section d'en-tête Markdown (ATX + Setext, fences/images/inline code exclus, preamble, --min/max-level, gates check/min-words/max-words/require-uniform/expect-sections exit 2, JSON, 14 tests) ✓ 2026-08-03
+- [x] text-long-word-list : liste les mots les plus longs d'un texte (seuil --min-length défaut 10, --top/--count/--position/--alpha/--ascending, accents+diacritics folding, gates check/min-count/max-count/max-length/require/forbid exit 2, JSON, 16 tests) ✓ 2026-08-03
+
 ## Vague 622 — CLI Tools (env, Markdown, JSON, URL, texte)
 - [x] env-whitespace-trim : détecte/corrige les espaces autour des valeurs .env (space-after-eq/trailing/around-quoted, quotes préservées, --write/--check exit 2, JSON, stdin, 18 tests) ✓ 2026-08-03
 - [x] markdown-horizontal-rule-report : rapport/normalise les séparateurs horizontaux Markdown (dash/star/underscore, spaced variants, fences skip, mixed=invalid, --normalize CHR --in-place, gates --check/--style exit 2, JSON, 12 tests) ✓ 2026-08-03

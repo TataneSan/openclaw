@@ -1,5 +1,8 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 620 — CLI Tools (texte)
+- [x] text-detect-natural-language : détecte la langue naturelle d'un texte (en/fr/es/de/it/pt/nl, stopwords pondérés par exclusivité + chars/sequences typiques, confidence, --per-line, --languages, gates expect/min-words/min-confidence exit 2, JSON, 17 tests) ✓ 2026-08-03
+
 ## Vague 619 — CLI Tools (texte, JSON, Markdown, env, URL, lignes)
 - [x] text-palindrome-detect : détecte les palindromes (mode lignes ou mots, normalisation case/alnum/diacritics, --min-length, gates check/require/min/max-count/expect exit 2, JSON, tests) ✓ 2026-08-03
 - [x] json-value-type-matrix : matrice chemin → types observés (jq-style paths, arrays[], polymorphic detect, --poly-only, gates check/require-type/forbid-type/min/max-paths exit 2, JSON, tests) ✓ 2026-08-03

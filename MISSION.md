@@ -1,6 +1,15 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 671 — CLI Tools (texte, CSV, env, indentation)
+- [x] text-tab-to-spaces : convertit tabulations <-> espaces (tab stops respectés, --to-tabs, CRLF préservé, gates --check/--max-tabs/--require-conversion exit 2, JSON, 19 tests) ✓ 2026-08-03
+
+## Vague 670 — CLI Tools (CSV, env, texte, JSON, préfixes)
+- [x] csv-trailing-space-inline : détecte/corrige les espaces dans les valeurs CSV (quoting préservé, BOM, sniff délimiteur, --strip/--in-place/--diff, gates --check/--require-fields/--max-fields exit 2, JSON, 12 tests) ✓ 2026-08-03
+- [x] env-split-key-value : sépare un .env en fichiers keys/values auditables (export toléré, --placeholder, --quote shlex, --mask REGEX, --keys-only/--values-only, gates --check exit 2, JSON, 11 tests) ✓ 2026-08-03
+- [x] text-reverse-words : inverse l'ordre des mots par ligne (--keep-whitespace, --reverse-chars, --numbers-only, --in-place, gate --check exit 2, JSON, 11 tests) ✓ 2026-08-03
+- [x] json-string-length : longueur de chaque chaîne JSON (chemins jq, --min/--max, tri, --values, --stats, gates --check/--require exit 2, JSON, 11 tests) ✓ 2026-08-03
+- [x] line-strip-prefix : retire un préfixe littéral ou regex de chaque ligne (--strict drop, --report-nonmatching, --in-place/-o, gates --check/--require-matched exit 2, JSON, 12 tests) ✓ 2026-08-03
 
 ## Vague 669 — CLI Tools (env, CSV, nombres)
 - [x] env-set-defaults : injecte des valeurs par défaut pour les clés absentes d'un .env (additif, -d KEY=VALUE/--defaults-file, export/--quote, gates --check/--require-existing/--require-added/--max-added exit 2, JSON, 12 tests) ✓ 2026-08-03

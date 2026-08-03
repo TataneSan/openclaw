@@ -7,6 +7,7 @@
 - [x] text-diacritics-strip : retire/remplace les diacritiques Unicode (NFKD, mapping compatibilité ß/æ/œ/ø/ð/þ, --keep-letters, --replace-compat, --check restes exit 2, --in-place, --report, JSON, stdin, 8 tests) ✓ 2026-08-03
 - [x] env-diff-compare : compare deux .env (clés uniques chaque côté, valeurs changées, --mask-values pour logs, --ignore/--ignore-prefix, --check exit 2 CI, JSON, 7 tests) ✓ 2026-08-03
 - [x] text-column-transpose : transpose lignes/colonnes de matrices texte (split whitespace ou --sep, --ragged-ok avec --fill, --out-sep, --require-input exit 2 CI, JSON, stdin, 7 tests) ✓ 2026-08-03
+- [x] markdown-heading-ids : existant sur GitHub, dossier restauré depuis le remote (déjà publié 2026-08-02) ✓ 2026-08-03
 
 
 ## Vague 641 — CLI Tools (texte, env, Markdown, JSON)

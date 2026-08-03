@@ -1,5 +1,13 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 619 — CLI Tools (texte, JSON, Markdown, env, URL, lignes)
+- [x] text-palindrome-detect : détecte les palindromes (mode lignes ou mots, normalisation case/alnum/diacritics, --min-length, gates check/require/min/max-count/expect exit 2, JSON, tests) ✓ 2026-08-03
+- [x] json-value-type-matrix : matrice chemin → types observés (jq-style paths, arrays[], polymorphic detect, --poly-only, gates check/require-type/forbid-type/min/max-paths exit 2, JSON, tests) ✓ 2026-08-03
+- [x] markdown-table-align-check : vérifie/corrige l'alignement des tables Markdown (cell-count, --strict widths, --fix/--in-place, fences ignorées, gates check/max-issues exit 2, JSON, tests) ✓ 2026-08-03
+- [x] env-shell-export-format : convertit .env en exports shell (posix/fish, quoting sûr, merge multi-fichiers, --prefix/--strip-prefix, gates check/strict-keys/require/forbid-key exit 2, JSON, tests) ✓ 2026-08-03
+- [x] url-path-segment-stats : stats des segments de path d'URLs (depth distribution, top segments, numeric IDs, empty/trailing slash, gates max-depth/check/require-numeric/forbid-empty exit 2, JSON, tests) ✓ 2026-08-03
+- [x] line-first-char-stats : distribution du premier caractère de chaque ligne (classes space/tab/alpha/digit/punct/blank, mixed-indent --check, gates require/forbid-class/char/max-classes exit 2, JSON, tests) ✓ 2026-08-03
+
 ## Vague 618 — CLI Tools (texte, INI, URL, Markdown, env)
 - [x] text-word-frequency-report : fréquence des mots (counts, ratios, density, gates require/forbid/min/max-count/unique/expect/density exit 2, JSON) ✓ 2026-08-03
 - [x] ini-merge-files : fusionne plusieurs INI (precedence first|last, DEFAULT optionnel, conflict report JSON, --check, gates require/max-conflicts exit 2) ✓ 2026-08-03

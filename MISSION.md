@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 614 — CLI Tools (lignes, INI, URL, env, Markdown)
+- [x] line-shortest-show : affiche les N lignes les plus courtes (lineno:length:content, --skip-blank/--blank-only/--first-only, gates check/min-len/max-len exit 2, JSON) ✓ 2026-08-03
+- [x] ini-keys-in-multiple-sections : détecte les clés INI présentes dans 2+ sections (--ignore-case, --sections-only, gates check/require-duplicates/min/max-count/expect-key exit 2, JSON) ✓ 2026-08-03
+- [x] url-path-normalize : normalise les chemins d'URLs (collapse //, resolve /./ /../, --trailing keep/force/strip, query+fragment préservés, gates check/require-changed/require-clean/min/max exit 2, JSON) ✓ 2026-08-03
+- [x] env-integer-values-only : valide les valeurs entières signées d'un .env (--all ou --key ciblé, quotes/export tolérés, --min-value/--max-value, --require-key, --allow-empty, exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-plain-text-extract : extrait le texte brut d'un Markdown (fences/images/liens/formatage/frontmatter strippés, --keep-code, --drop-headings, gates min/max-words + require-non-empty exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 613 — CLI Tools (URL, JSON, texte, INI, lignes)
 - [x] url-strip-tracking-params : retire les paramètres de tracking des URLs (utm_*, fbclid, gclid, liste 60+ curée, --add/--remove/--only, gates check/require-changed/require-clean/min/max-removed exit 2, JSON) ✓ 2026-08-03
 - [x] json-min-max-value : min/max des valeurs numériques d'un JSON avec chemins jq-style (booleans exclus, --path subtree, --show-all, gates expect-min/max + min/max-floor/ceiling + require-any/min-count exit 2, JSON) ✓ 2026-08-03

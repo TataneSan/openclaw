@@ -1,6 +1,13 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 677 — CLI Tools (ROT13, env, CSV, JSONL, ANSI)
+- [x] text-rot13-codec : ROT13 / ROT-N cipher (rotation 0-25, --digits, --expect byte-exact / --check gates exit 2, JSON, stdin, 17 tests) ✓ 2026-08-03
+- [x] env-value-length-histogram : histogramme des longueurs de valeurs .env (quotes/export/commentaires tolérés, --bucket, --list/--mask, gates --min/--max-length, --max-empty, --require-key exit 2, JSON, stdin, 21 tests) ✓ 2026-08-03
+- [x] csv-column-fill-rate : taux de remplissage par colonne CSV (sniff délimiteur, marqueurs null-like custom !replace, barres ASCII, tris name/fill/empty, gates --min-fill/--max-empty/--require-column/--require-full exit 2, JSON, stdin, 17 tests) ✓ 2026-08-03
+- [x] jsonl-schema-suggest : infère un JSON Schema draft-2020-12 d'un flux JSONL (types unifiés int/number, required si clé sur chaque objet, nullabilité, multi-fichiers, --summary, gates --strict/--max-errors/--require-key/--require-type exit 2, 19 tests) ✓ 2026-08-03
+- [x] text-ansi-color-codes-map : inventaire des codes SGR ANSI d'un flux (multi-paramètres, 8/16 couleurs, bright, 256, truecolor RGB, attributs, reset nu normalisé, tris count/code/label, gates --check/--require-code/--forbid-code/--max-unique exit 2, JSON, stdin, 20 tests) ✓ 2026-08-03
+
 ## Vague 676 — CLI Tools (Markdown, mots, env, chiffres, phrases)
 - [x] markdown-heading-level-check : audite la structure des titres Markdown ATX/Setext (sauts de niveau, premier titre non-H1, doublons insensibles à la casse, >H6 et sans-espace signalés, fences ignorées, histogramme, gates --check/--require-h1/--min-headings/--max-level exit 2, JSON, stdin, 16 tests) ✓ 2026-08-03
 - [x] text-word-length-stats : statistiques de longueur des mots (extraction Unicode, chiffres exclus, contractions, mean/median/mode/stdev, histogramme + barres, --min-len, gates --min-words/--max-mean/--min-mean/--max-length exit 2, JSON, stdin, 13 tests) ✓ 2026-08-03

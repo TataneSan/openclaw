@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 605 — CLI Tools (Markdown, CSV, texte, env, lignes)
+- [x] markdown-link-check-list : liste et valide les liens Markdown (inline, référence, autolink, bare URL, fences/code ignorés, gates check/require-links/min/max-count exit 2, JSON) ✓ 2026-08-03
+- [x] csv-column-reorder : réordonne les colonnes d'un CSV par nom ou index (header conservé, '...' pour le reste, délimiteurs sniffer/output, --check/require-columns exit 2, JSON) ✓ 2026-08-03
+- [x] text-unicode-normalize : normalise du texte vers NFC/NFD/NFKC/NFKD, folding ASCII optionnel (--check exit 2, --count, JSON multi-fichiers) ✓ 2026-08-03
+- [x] env-default-inject : injecte les valeurs par défaut manquantes d'un .env (no-overwrite, prefix-stub, comment/dry-run/in-place, check exit 2, JSON) ✓ 2026-08-03
+- [x] line-random-seed : mélange réproductible de lignes (--seed hashé, --sample, --reverse, --block-size, gates check/require-count/min/max exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 604 — CLI Tools (Markdown, CSV, texte, JSON, lignes, INI)
 - [x] markdown-table-align : réaligne les tables pipe Markdown (largeurs uniformes, hints :---/:---:/---: préservés, fences ignorés, --in-place, --check exit 2, JSON) ✓ 2026-08-03
 - [x] csv-pad-ragged-rows : normalise les lignes CSV ragged (pad vide/--fill, troncature --truncate, target header/--width/--to-max, délimiteur sniffé, --check/require-ragged exit 2, JSON) ✓ 2026-08-03

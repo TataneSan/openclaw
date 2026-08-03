@@ -1,6 +1,11 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 664 — CLI Tools (UUIDs, Markdown, CSV)
+- [x] log-extract-uuids : extrait et audite les UUIDs des logs (canoniques + compactes --with-compact, normalisation lowercase, versions/variantes, --count/--unique/--stats, gates --check/--require/--max-unique exit 2, JSON, stdin, 11 tests) ✓ 2026-08-03
+- [x] markdown-url-decode : décode les URLs percent-encodées en Markdown (liens inline, ref-defs, URLs nues, fences/code inline protégés, --list/--in-place, gates --check/--require-encoded/--max-encoded exit 2, JSON, 13 tests) ✓ 2026-08-03
+- [x] csv-numeric-filter : filtre un CSV par conditions numériques (--where 'col OP val', between, AND/--or, EU numbers, --no-header, --invert/--count/--strict, gates --require-rows/--max-rows exit 2, JSON, 17 tests) ✓ 2026-08-03
+
 ## Vague 663 — CLI Tools (IPv6, shell, netmasks, réseaux, BOM)
 - [x] ipv6-hextet-count : compte les hextets peuplés vs compressés d'adresses IPv6 (expansion/validation ipaddress, gates --min/--max-populated, --require/--forbid-compression exit 2, JSON, stdin, 14 tests) ✓ 2026-08-03
 - [x] shell-redirection-audit : audite les redirections shell (stdout/stderr/both truncate/append, clobber, fd-dup, here-doc/here-string, quotes+commentaires ignorés, kinds, --count, gates --check/--forbid-kind/--max-count exit 2, JSON, 17 tests) ✓ 2026-08-03

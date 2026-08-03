@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 600 — CLI Tools (texte, lignes, fichiers, INI)
+- [x] text-uppercase-words : met en majuscules des mots ciblés (all, --keywords liste/fichier, --nth N, ignore-case, --no-change-check exit 2, JSON) ✓ 2026-08-03
+- [x] line-reverse-order : inverse l'ordre des lignes (tac, trailing newline préservé, assertions --expect-lines/--head-check/--tail-check exit 2, JSON) ✓ 2026-08-03
+- [x] file-trailing-newline : vérifie/corrige la newline finale des fichiers (--fix, -r --glob, --max-size, --include-empty, exit 2, JSON) ✓ 2026-08-03
+- [x] ini-section-merge : fusionne des INI en overlay (--on-conflict last/first/error, --delete-section/--delete-key, --require-key exit 2, formats ini/env/json, --sort) ✓ 2026-08-03
+- [x] line-suffix-add : suffixe chaque ligne ({n} numérotation, --skip-empty, --check-existing, --expect-lines exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 599 — CLI Tools (texte, whitespace, Markdown, JSON, CSV)
 - [x] line-prefix-add : préfixe chaque ligne d'un flux ({n} numérotation, --skip-empty, --check-existing, --expect-lines exit 2, JSON) ✓ 2026-08-03
 - [x] text-whitespace-report : rapport whitespace (indentation, tabs, trailing, longueurs) avec lint --no-tabs/--no-trailing/--max-line-length/--max-indent exit 2, JSON ✓ 2026-08-03

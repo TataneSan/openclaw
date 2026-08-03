@@ -1,5 +1,9 @@
 # OpenClaw — File d'attente des outils
 
+
+## Vague 660 — CLI Tools (entités HTML, MIME, ports, codes pays, unicode)
+- [x] html-entity-encode : encode/décode les entités HTML (named/decimal/hex, --all, --ascii-only, --keep, --list positions, gates require-encoded/decoded/changes/entities exit 2, JSON, stdin, in-place, 28 tests) ✓ 2026-08-03
+
 ## Vague 659 — CLI Tools (hosts, timestamps, chmod, Makefiles, anagrammes)
 - [x] hosts-file-lint : lint /etc/hosts (invalid-ip, malformed-hostname, duplicate-entry/hostname avec shadowing, non-canonical-loopback, trailing-whitespace, missing-localhost v4/v6, --allow-duplicate-hostname, --ignore-missing-localhost, gates --check/--forbid/--max-findings exit 2, JSON, stdin, 17 tests) ✓ 2026-08-03
 - [x] timestamp-to-date : convertit timestamps Unix ⇄ dates ISO 8601 (auto-détection précision s/ms/us/ns par magnitude, --unit forcé, --tz UTC/+HH:MM/IANA, styles iso/utc/date/full, batch args+stdin, gates --strict/--require-conversions exit 2, JSON, 15 tests) ✓ 2026-08-03

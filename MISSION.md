@@ -1,6 +1,14 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 643 — CLI Tools (INI, CSV, env, Markdown, texte)
+- [x] ini-comment-align : aligne les commentaires trailing ;/# des fichiers INI sur une colonne commune (blocs séparés par sections/blancs/commentaires pleine ligne, --min-gap, --in-place/-o, gates --check/--require-dirty/--max-changes exit 2, JSON, stdin, 18 tests) ✓ 2026-08-03
+- [x] csv-column-dedupe-rename : détecte et renomme les en-têtes CSV dupliqués (styles suffix/prefix/index-1, sniffing hors-quotes, quoting et whitespace des cellules préservés, --ignore-case, gates --check/--max-renames exit 2, JSON, stdin, 22 tests) ✓ 2026-08-03
+- [x] env-order-sort : trie les clés d'un .env alphabétiquement (lignes structurelles commentaires/blancs/invalides figées, clés triées globalement autour, export toléré, --ignore-case, --desc, --in-place/-o, valeurs jamais exposées, gates --check/--max-moves exit 2, JSON, stdin, 20 tests) ✓ 2026-08-03
+- [x] markdown-anchor-check : valide que les liens #fragment internes d'un Markdown pointent vers des titres existants (slugs GitHub ATX+setext, doublons suffixés -1, fences et inline code ignorés, line:col, --list-anchors, --allow-missing, gates --check/--max-dangling/--require-links exit 2, JSON, stdin, 21 tests) ✓ 2026-08-03
+- [x] text-bom-detect : détecte et retire le BOM d'un fichier texte (UTF-8/16-LE/16-BE avec rapport, --strip, --add utf8, --in-place/-o, multi-fichiers, gates --check/--expect none|utf8|utf16-le|utf16-be exit 2, JSON, stdin, 19 tests) ✓ 2026-08-03
+
+
 ## Vague 642 — CLI Tools (Markdown, texte, env)
 - [x] markdown-table-column-align : détecte et corrige la dérive des marqueurs d'alignement dans les tables Markdown (inférence type colonne, --expected NAME=ALIGN, --fix in-place, --check exit 2 CI, JSON, stdin, 7 tests) ✓ 2026-08-03
 - [x] markdown-frontmatter-lint : valide les blocs front-matter YAML/TOML/JSON (--require KEY, --forbid KEY, --type KEY=TYPE, --regex KEY=PATTERN, --allow-absent, exit 2 CI, JSON, stdin, 12 tests) ✓ 2026-08-03

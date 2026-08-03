@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 603 — CLI Tools (CSV, INI, env, chemins)
+- [x] csv-row-number-validate : valide qu'une colonne CSV est une séquence d'entiers (start/step/gaps/dupes, --min/--max, exit 2, --json) ✓ 2026-08-03
+- [x] ini-comment-strip : supprime les commentaires ; et # des INI en préservant valeurs quotées et marqueurs dans strings (--markers, --check exit 2, --in-place, --json) ✓ 2026-08-03
+- [x] env-prefix-validate : valide que chaque clé .env respecte une convention de préfixe (-p multi, --forbid-prefix, --pattern regex, --allow, exit 2, --json) ✓ 2026-08-03
+- [x] csv-delimiter-normalize : convertit un CSV vers tout délimiteur (comma/semicolon/tab/pipe/colon, auto-detect avec fallback fréquence+consistance, quoting minimal/all/nonnumeric/none, --line-ending lf/crlf, --check exit 2) ✓ 2026-08-03
+- [x] path-absolute-resolve : résout les chemins relatifs en absolus (--base, --real symlinks, --must-exist/--must-not-exist/--must-be-inside exit 2, --relative-to, stdin batch -0, JSON) ✓ 2026-08-03
+
 ## Vague 602 — CLI Tools (CSV, HTTP, Markdown, texte, lignes)
 - [x] csv-column-mask : masque des colonnes CSV sensibles (modes full/first/last/hash sha256, délimiteur auto, --require-masked exit 2, --json) ✓ 2026-08-03
 - [x] http-header-canonical : normalise la casse des headers HTTP (Title-Case, exceptions ETag/WWW-Authenticate/X-Forwarded-*, --lowercase http2, --sort, --format http/json/dict, --check exit 2) ✓ 2026-08-03

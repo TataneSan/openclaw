@@ -1,6 +1,13 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 663 — CLI Tools (IPv6, shell, netmasks, réseaux, BOM)
+- [x] ipv6-hextet-count : compte les hextets peuplés vs compressés d'adresses IPv6 (expansion/validation ipaddress, gates --min/--max-populated, --require/--forbid-compression exit 2, JSON, stdin, 14 tests) ✓ 2026-08-03
+- [x] shell-redirection-audit : audite les redirections shell (stdout/stderr/both truncate/append, clobber, fd-dup, here-doc/here-string, quotes+commentaires ignorés, kinds, --count, gates --check/--forbid-kind/--max-count exit 2, JSON, 17 tests) ✓ 2026-08-03
+- [x] ip-netmask-convert : convertit netmasks pointillés ⇄ préfixes CIDR (masques non-contigus rejetés, wildcard/host_bits/usable, --to prefix|dotted, gates --min/--max-prefix exit 2, JSON, 16 tests) ✓ 2026-08-03
+- [x] ip-network-border : calcule adresses réseau/broadcast de préfixes IPv4 (host forms normalisés, first/last host, --field, gates --require-network-form/--min/--max-addresses exit 2, JSON, 15 tests) ✓ 2026-08-03
+- [x] csv-add-bom : ajoute/retire/vérifie le BOM UTF-8 des CSV (idempotent, -o copie, --check/--remove/--require-change exit 2, JSON, 12 tests) ✓ 2026-08-03
+
 ## Vague 662 — CLI Tools (logs, crochets, niveaux)
 - [x] log-extract-paths : extrait chemins Unix/Windows/URLs/relatifs des logs (kinds, count, min-count, gates check/require exit 2, JSON, stdin, 13 tests) ✓ 2026-08-03
 - [x] paren-balance : vérifie équilibre () [] {} <> (mismatch/unclosed/unexpected, positions ligne:col, --lang py/js/c strings+commentaires ignorés, --max-issues, JSON, 13 tests) ✓ 2026-08-03

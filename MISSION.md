@@ -1,5 +1,13 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 597 — CLI Tools (CSV, env, lignes, texte, fichiers, JSON)
+- [x] csv-remove-empty-columns : supprime les colonnes CSV dont toutes les cellules sont vides (délimiteur auto, --report, --no-header, --trim, gates require-empty/require-none-empty/min/max-removed exit 2, JSON) ✓ 2026-08-03
+- [x] env-empty-values : détecte/liste/supprime/remplit les variables vides d'un .env (KEY=, "", '', commentaires inline, --report/--remove/--fill/--in-place, --check/min/max-count exit 2, JSON) ✓ 2026-08-03
+- [x] line-truncate-width : tronque les lignes trop longues (tabs expandés, modes end/start/middle avec marqueur ellipsis custom, --check/min/max-truncated exit 2, JSON stderr) ✓ 2026-08-03
+- [x] text-decimal-round : arrondit les nombres décimaux d'un texte en place (Decimal exact, --places, --rounding half-up/half-even/up/down, --integers, --word-boundary, --check/min/max-changed exit 2, JSON stderr) ✓ 2026-08-03
+- [x] file-mime-by-extension : devine les types MIME par extension (table mimetypes + extras .md/.yaml/.rs/.parquet/.wasm, stdin, --list, --quiet, gates check/require-type exit 2, JSON) ✓ 2026-08-03
+- [x] json-utf8-validate : valide l'encodage UTF-8 de fichiers avec position d'erreur (BOM detect/forbid, --json-content pour valider aussi le JSON, multi-fichiers/stdin, exit 2 si invalide, JSON) ✓ 2026-08-03
+
 ## Vague 596 — CLI Tools (Markdown, lignes, fichiers, JSON, texte)
 - [x] markdown-code-block-extract : extrait les blocs de code fenced d'un Markdown (``` / ~~~, filtre --lang avec alias, --list, --with-fences, détection fences non fermées --check exit 2, gates require-blocks/require-lang/min/max-count, JSON) ✓ 2026-08-03
 - [x] line-prefix-numbers : préfixe chaque ligne d'un numéro (start/step/pad auto ou forcé, séparateur custom, --skip-blank, gates require-lines/min/max-lines exit 2, JSON stderr) ✓ 2026-08-03

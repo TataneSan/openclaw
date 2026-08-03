@@ -1,5 +1,13 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 604 — CLI Tools (Markdown, CSV, texte, JSON, lignes, INI)
+- [x] markdown-table-align : réaligne les tables pipe Markdown (largeurs uniformes, hints :---/:---:/---: préservés, fences ignorés, --in-place, --check exit 2, JSON) ✓ 2026-08-03
+- [x] csv-pad-ragged-rows : normalise les lignes CSV ragged (pad vide/--fill, troncature --truncate, target header/--width/--to-max, délimiteur sniffé, --check/require-ragged exit 2, JSON) ✓ 2026-08-03
+- [x] text-word-shuffle-seed : mélange déterministe des mots par ligne (--seed, --lines, --keep-first/--keep-last, gates check/require-changed/require-unchanged exit 2, JSON) ✓ 2026-08-03
+- [x] json-toggle-null-string : bascule null <-> "null" (modes dans les deux sens, sentinelle --from/--to, JSONL, --compact, gates check/require-changed exit 2, JSON) ✓ 2026-08-03
+- [x] line-count-report : compte les lignes avec breakdowns (total/blank/comment/long, min/max/mean len, --fields, gates min/max-lines/require-non-empty/max-blank exit 2, JSON) ✓ 2026-08-03
+- [x] ini-value-quote-check : audit du quoting des valeurs INI (bare/single/double/unbalanced, --strict-mixed, --style enforce, --to normalize --in-place, exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 603 — CLI Tools (CSV, INI, env, chemins)
 - [x] csv-row-number-validate : valide qu'une colonne CSV est une séquence d'entiers (start/step/gaps/dupes, --min/--max, exit 2, --json) ✓ 2026-08-03
 - [x] ini-comment-strip : supprime les commentaires ; et # des INI en préservant valeurs quotées et marqueurs dans strings (--markers, --check exit 2, --in-place, --json) ✓ 2026-08-03

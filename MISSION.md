@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 632 — CLI Tools (texte, hex, lignes, emoji)
+- [x] text-acronym-maker : génère des acronymes depuis du texte (stopwords EN/FR, --title-case, gates --check/--require-min-length/--require-max-length exit 2, JSON) ✓ 2026-08-03
+- [x] hex-codec : encode/decode hex (--upper, --separator, --group, --decode, --auto, gates --check/--require-encoded exit 2, JSON) ✓ 2026-08-03
+- [x] text-word-reverse : inverse mots/lettres par ligne (3 modes, whitespace/ponctuation préservés optionnel, gates --check/--require-change/--require-unchanged exit 2, JSON) ✓ 2026-08-03
+- [x] line-interleave : entrelace N fichiers en round-robin ou blocs (--drop-extras, --gap, --split-stdin, gates --check/--require-lines exit 2, JSON) ✓ 2026-08-03
+- [x] text-emoji-strip : détecte/liste/compte/strip emoji (Catégories Unicode complètes, --replace, gates --check/--require-found/--max-emoji exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 631 — CLI Tools (texte, CSV, JSON, lignes, gitignore)
 - [x] text-letter-frequency-csv : fréquence des caractères Unicode (casefold, --include-digits/space/punct, CSV+JSON, gates require/forbid-letter/min-max-unique exit 2, 12 tests) ✓ 2026-08-03
 - [x] csv-column-pick-list : extrait les valeurs de colonnes CSV (nom ou #index, délimiteur sniffé, multi-colonnes --join, --unique/--sort/--ignore-case, --skip-empty, gates min/max/require/forbid-value exit 2, JSON, 13 tests) ✓ 2026-08-03

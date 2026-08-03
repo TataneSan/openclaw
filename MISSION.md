@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 599 — CLI Tools (texte, whitespace, Markdown, JSON, CSV)
+- [x] line-prefix-add : préfixe chaque ligne d'un flux ({n} numérotation, --skip-empty, --check-existing, --expect-lines exit 2, JSON) ✓ 2026-08-03
+- [x] text-whitespace-report : rapport whitespace (indentation, tabs, trailing, longueurs) avec lint --no-tabs/--no-trailing/--max-line-length/--max-indent exit 2, JSON ✓ 2026-08-03
+- [x] markdown-heading-anchors : liste les ancres GitHub des titres Markdown, TOC --toc, --check duplicatas/liens cassés exit 2, code fences ignorés, JSON ✓ 2026-08-03
+- [x] json-empty-checks : détecte valeurs vides (null, "", [], {}) avec chemins dot (--kinds, --check, --require-empty, --max-find exit 2, JSON) ✓ 2026-08-03
+- [x] csv-strip-columns : trim whitespace des cellules CSV (colonnes ciblées, modes strip/lstrip/rstrip/collapse, délimiteur auto, --check exit 2, --in-place, JSON) ✓ 2026-08-03
+
 ## Vague 598 — CLI Tools (fichiers, CSV, env, lignes, INI)
 - [x] file-empty-find : trouve fichiers et dossiers vides dans une arborescence (--whitespace-empty, --ignore-glob, --max-depth, --follow-symlinks, modes --files/--dirs, gates require-none/require-any/min/max-count + --check exit 2, JSON) ✓ 2026-08-03
 - [x] csv-split-files : découpe un CSV en N fichiers (--lines N ou --parts K équilibrés, header conservé, délimiteur auto, cellules multi-lignes, --dry-run, --force, gates min/max-parts/require-balanced exit 2, JSON) ✓ 2026-08-03

@@ -1,6 +1,14 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 678 — CLI Tools (Base58, CSV dupes, casing, env, similarité)
+- [x] text-base58-codec : encode/decode Base58 (alphabets Bitcoin + Flickr, leading-zero préservés, --check round-trip, gates --expect/--require-encoded/--require-decoded exit 2, JSON, stdin, 18 tests) ✓ 2026-08-03
+- [x] csv-dupe-row-detect : détecte/supprime les lignes CSV dupliquées (full-row ou colonnes clés nom/#index, sniff délimiteur, --ignore-case, --list groupes+lignes, --drop stable first-kept, gates --check/--require-dupes/--max-dupes/--expect-count exit 2, JSON, stdin, 20 tests) ✓ 2026-08-03
+- [x] text-word-casing-convert : convertit identifiants entre 10 styles (camel/pascal/snake/screaming/kebab/train/dot/title/lower/upper, splitter acronymes+digits, --detect source-style, gates --check/--require-changed/--expect exit 2, JSON, args/stdin, 30 tests) ✓ 2026-08-03
+- [x] env-key-casing-check : audite la convention de casse des clés .env (screaming/snake/camel/pascal/kebab/lower/upper/mixed, dominant inféré ou --style forcé, export/quotes/commentaires tolérés, --list/--violations-only, gates --check/--expect-style/--min-keys/--max-violations exit 2, JSON, stdin, 22 tests) ✓ 2026-08-03
+- [x] text-near-duplicate-lines : détecte les lignes quasi-dupliquées (Jaccard token + Levenshtein ratio, --metric jaccard|edit|both, --threshold, --skip-exact/--skip-blank, --show-text, gates --check/--require-pairs/--max-pairs/--expect-count exit 2, JSON, stdin, 23 tests) ✓ 2026-08-03
+
+
 ## Vague 677 — CLI Tools (ROT13, env, CSV, JSONL, ANSI)
 - [x] text-rot13-codec : ROT13 / ROT-N cipher (rotation 0-25, --digits, --expect byte-exact / --check gates exit 2, JSON, stdin, 17 tests) ✓ 2026-08-03
 - [x] env-value-length-histogram : histogramme des longueurs de valeurs .env (quotes/export/commentaires tolérés, --bucket, --list/--mask, gates --min/--max-length, --max-empty, --require-key exit 2, JSON, stdin, 21 tests) ✓ 2026-08-03

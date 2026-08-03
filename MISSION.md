@@ -2,6 +2,13 @@
 
 
 
+## Vague 667 — CLI Tools (JSON, Markdown, CSV, voyelles, tirages)
+- [x] json-empty-stats : rapport des valeurs vides d'un JSON (null/""/[]/{}, chemins jq-style --paths, tri count/path, multi-fichiers, gates --check/--max-empty exit 2, JSON, 10 tests) ✓ 2026-08-03
+- [x] markdown-list-done-move : descend les items cochés des task lists (bullets/numérotés, marques custom --done-marks/--open-marks, fences préservées, ordre relatif conservé, --in-place/--diff/--count, --check exit 2, JSON, 11 tests) ✓ 2026-08-03
+- [x] csv-rename-column : renomme des colonnes CSV par nom ou #index (sniff délimiteur, BOM, collisions/interdits rejetés, --list, --check/--check-absent exit 2, -o, JSON, 13 tests) ✓ 2026-08-03
+- [x] text-vowel-strip : supprime ou rapporte les voyelles (--extended accents, -y, --report/--count-only, gates --check/--min/--max-vowels exit 2, --in-place, JSON, 12 tests) ✓ 2026-08-03
+- [x] line-random-pick : tire N lignes aléatoires (--seed reproductible, --replace, --unique, --numbered, gates --require-lines/--require-distinct exit 2, JSON, 13 tests) ✓ 2026-08-03
+
 ## Vague 666 — CLI Tools (fréquences casse, jointure CSV, JSONL, MAC, box, marqueurs)
 - [x] text-word-frequency-case : fréquences de mots avec variantes de casse (casefold grouped, dominant form, filtres min-length/min-count/top, sorts count/variants/alpha, gates check/require-variants/max-variants exit 2, JSON, 9 tests) ✓ 2026-08-03
 - [x] csv-join-key : jointure de deux CSV sur colonne clé (inner/left/right/full, colonnes nom ou #index, --right-on, suffixe collisions, délimiteur sniffé, BOM, gates require-matched/max-unmatched exit 2, JSON, stdin, 10 tests) ✓ 2026-08-03

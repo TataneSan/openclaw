@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 650 — CLI Tools (CSV, Markdown, lignes, INI, texte)
+- [x] csv-quoting-normalize : normalise le style de quoting CSV (minimal/all/non-numeric/none avec escaping, délimiteur sniffé, round-trip stdlib, --in-place/-o, gates --check/--require-change/--require-quoted/--require-unquoted exit 2, JSON stderr, stdin, 21 tests) ✓ 2026-08-03
+- [x] markdown-inline-code-report : rapporte les spans de code inline Markdown (`code` et ``code``, line:col, tick count, fences/indented exclus, unclosed détectés, --list --unique --sort --multi-tick-only, gates --check/--require-any/--min-count/--max-count/--max-len/--require-unclosed exit 2, JSON stderr, stdin, 20 tests) ✓ 2026-08-03
+- [x] line-collapse-blank : réduit les rafales de lignes vides à N max (cat -s configurable, mode --whitespace, CRLF préservées, --in-place/-o, gates --check/--require-change/--max-collapse exit 2, JSON stderr, stdin, 20 tests) ✓ 2026-08-03
+- [x] ini-value-trim : trimme les espaces autour des valeurs INI (valeurs quotées intactes, commentaires inline préservés, séparateurs = et :, spacing key= conservé, --report, --in-place/-o, gates --check/--require-change/--require-dirty/--max-changes exit 2, JSON stderr, stdin, 17 tests) ✓ 2026-08-03
+- [x] text-empty-line-count : compte les lignes vides et whitespace-only avec statistiques de runs (total/empty/ws-only/non-empty/longest run/ratio, multi-fichiers avec agrégats, --count-only, gates --check/--max/--min/--max-ratio/--max-run/--require-empty exit 2, JSON stderr, stdin, 16 tests) ✓ 2026-08-03
+
 ## Vague 649 — CLI Tools (INI, CSV, Markdown, texte, lignes)
 - [x] ini-value-dup-check : détecte les valeurs dupliquées entre clés/sections INI (commentaires inline stripping, --ignore-case/--trim, placeholders skippés, filtres --only-key/--ignore-key, --hide-values, gates --check/--max-dups/--max-occurrences/--require-dups exit 2, JSON, stdin, 23 tests) ✓ 2026-08-03
 - [x] csv-row-field-count-check : valide que chaque ligne CSV a le bon nombre de champs (référence header ou --expect, délimiteur sniffé, quoted fields, histogramme, gates --max-bad/--min-ratio/--require-rows exit 2, JSON, -q, stdin, 19 tests) ✓ 2026-08-03

@@ -1,6 +1,14 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 645 — CLI Tools (INI, texte, Markdown, JSON)
+- [x] ini-quote-normalize : rapporte et normalise le style de quoting des valeurs INI (none/single/double, commentaires inline préservés, valeurs dangereuses gardées quotées, --in-place/-o, gates --check/--require-style/--max-changes exit 2, JSON, stdin, 19 tests) ✓ 2026-08-03
+- [x] text-slash-escape : encode/décode les séquences backslash (\n \t \xHH \uXXXX \UXXXXXXXX, --keep-newlines, --escape-nonprint, --strict offsets, gates --check/--expect-changed/--expect-unchanged/--max-changes exit 2, JSON stderr, stdin, 25 tests) ✓ 2026-08-03
+- [x] markdown-code-lang-report : rapporte les langages des fences Markdown (```/~~~, histogramme, untagged, unclosed avec lignes, --list, gates --allow/--forbid/--require-tagged/--max-untagged/--min-fences exit 2, JSON, stdin, 21 tests) ✓ 2026-08-03
+- [x] json-minify-safe : minifie du JSON en validant d'abord (rien émis sur JSON invalide, mode --jsonl, --ascii/--sort-keys, --in-place sécurisé, stats bytes, gates --expect-savings/--min-savings/--max-output-bytes/--require-changed exit 2, JSON stderr, stdin, 20 tests) ✓ 2026-08-03
+- [x] ini-list-keys : extrait le squelette d'un INI sans jamais exposer les valeurs (sections/clés avec lignes, globaux, doublons, modes --sections-only/--keys-only/--count, multi-fichiers, gates --require-section/--forbid-key/--max-keys/--min-sections/--check-empty/--strict exit 2, JSON, stdin, 24 tests) ✓ 2026-08-03
+
+
 ## Vague 644 — CLI Tools (Markdown, lignes, texte)
 - [x] markdown-list-flatten : aplatit les listes Markdown imbriquées sur un seul niveau (bullets/ordered, --style, --strip-marker, fences préservées, gates --check/--max-depth exit 2, JSON, stdin, 14 tests) ✓ 2026-08-03
 - [x] line-shuffle-sort : mélange aléatoire reproductible des lignes (--seed, --head échantillon, --unique, rapport stderr, gate --check ordre seedé exit 2, JSON, stdin, 10 tests) ✓ 2026-08-03

@@ -1,5 +1,13 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 621 — CLI Tools (texte, URL, Markdown, JSON, lignes)
+- [x] text-tab-space-mix : detecte/corrige le melange tabs/espaces dans l'indentation (rapport/mixed lines, --to tabs|spaces + --width, --in-place, gates --check exit 2, JSON) ✓ 2026-08-03
+- [x] url-host-extract : extrait et rapporte les hotes d'URLs (domaine/ipv4/ipv6, --unique/--count/--with-port/--family, gates require/forbid/check exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-image-alt-check : verifie les alt des images Markdown (vides/generiques, fences ignorees, gates --check/--max/--min-ratio exit 2, JSON) ✓ 2026-08-03
+- [x] json-numeric-precision-report : rapport de precision des nombres JSON (chemins jq-style, histogramme decimales, gates --max-decimals/--require-nonzero/--check exit 2, JSON) ✓ 2026-08-03
+- [x] line-indent-depth-report : niveaux d'indentation ligne par ligne (histogramme, --level, gates --max-depth/--require-nested exit 2, JSON) ✓ 2026-08-03
+- [x] text-hex-color-extract : extrait/normalise les couleurs hex #rgb/#rrggbb/#rrggbbaa (--unique/--count/--with-position, gates --require/--check/--min exit 2, JSON) ✓ 2026-08-03
+
 ## Vague 620 — CLI Tools (texte)
 - [x] text-detect-natural-language : détecte la langue naturelle d'un texte (en/fr/es/de/it/pt/nl, stopwords pondérés par exclusivité + chars/sequences typiques, confidence, --per-line, --languages, gates expect/min-words/min-confidence exit 2, JSON, 17 tests) ✓ 2026-08-03
 - [x] markdown-checklist-progress : calcule le pourcentage d'avancement des task lists Markdown (bullets - * +, nesting, case-insensitive X, barre ASCII/--width, badge shields, gates min-percent/expect exit 2, JSON, 14 tests) ✓ 2026-08-03

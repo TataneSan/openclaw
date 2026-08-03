@@ -7,6 +7,7 @@
 - [x] env-quote-normalize : rapporte et normalise le quoting des valeurs .env (none/single/double, escapes doubles quotes, commentaires/inline/export préservés, --style/--only-needed, --in-place/-o, gates --check/--require-style/--max-changes exit 2, JSON) ✓ 2026-08-03
 - [x] csv-add-row-numbers : ajoute une colonne de numérotation à un CSV (nom/position first-last-N, --start/--step, --no-header, délimiteur sniffé, gates --check-empty/--expect-rows exit 2, JSON) ✓ 2026-08-03
 - [x] markdown-def-list-check : rapporte et lint les listes de définitions Markdown (Terme / : définition, orphelins et définitions vides, fences ignorées, --terms-only/--orphans-only, gates --check/--require-any/--max-orphans/--max-empty exit 2, JSON) ✓ 2026-08-03
+- [x] json-string-length-report : statistiques de longueur des strings par chemin jq d'un JSON/JSONL (min/max/mean/count, mesure chars ou bytes UTF-8, --show-longest, --sort path/max/mean/count, gates --min-len/--max-len/--require-path/--require-strings exit 2, JSON) ✓ 2026-08-03
 
 
 ## Vague 639 — CLI Tools (CSV, Markdown, env, JSON, texte)

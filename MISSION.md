@@ -1,5 +1,12 @@
 # OpenClaw — File d'attente des outils
 
+## Vague 653 — CLI Tools (texte, Markdown, env, JSON, CSV)
+- [x] text-soft-wrap-unwrap : joint les lignes soft-wrapped en paragraphes simples (listes/titres/fences/tables/code indenté préservés, --no-keep-structured, --in-place/-o, gates --check/--require-change/--max-joins exit 2, JSON stderr, stdin, 24 tests) ✓ 2026-08-03
+- [x] markdown-image-path-validate : valide l'existence des images locales référencées en Markdown (remotes/data: skippés, fences ignorées, fragment/query strip + URL-decode, résolutions relatives, --allow-missing/--require-images/--max-missing exit 2, JSON rapports, 21 tests) ✓ 2026-08-03
+- [x] env-line-dupe-check : détecte clés et lignes dupliquées dans un .env (export normalisé, --ignore-case, --keys-only/--lines-only, --max-key-dupes/--max-line-dupes/--require-duplicates exit 2, valeurs jamais exposées, JSON stderr, stdin, 18 tests) ✓ 2026-08-03
+- [x] json-unicode-escape-normalize : normalize JSON entre Unicode littéral et échappements \uXXXX (--to-ascii/--to-unicode, fallback JSONL automatique, --indent 0 compact, --sort-keys, --in-place/-o, --check/--require-change exit 2, JSON stderr, 17 tests) ✓ 2026-08-03
+- [x] csv-cell-quote-detect : rapporte le style de quoting par cellule (bare/quoted/escaped/malformed, scanner maison qui garde le tracking des octets, délimiteur sniffé, --list, --by-column, gates --max-malformed/--max-quoted-percent/--require-quoting exit 2, JSON, 17 tests) ✓ 2026-08-03
+
 ## Vague 652 — CLI Tools (Markdown, texte, JSON, INI)
 - [x] csv-quote-style-report : existant sur GitHub, dossier restauré depuis le remote (analyse du style de quoting CSV par cellule, délimiteur sniffé, 14 tests) ✓ 2026-08-03
 - [x] markdown-heading-blank-line-check : lint les lignes vides autour des titres Markdown (ATX + setext, front matter YAML/TOML/JSON, fences ignorées, HR/--- non confondues, --require-blank-before/after N, --fix/--in-place/-o, gates --check/--min-headings/--max-violations/--require-violations exit 2, JSON stderr, stdin, 26 tests) ✓ 2026-08-03

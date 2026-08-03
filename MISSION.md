@@ -1,6 +1,14 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 639 — CLI Tools (CSV, Markdown, env, JSON, texte)
+- [x] csv-column-type-detect : infère le type de chaque colonne CSV (bool/int/float/date/datetime/email/url/uuid/string, délimiteur auto, distribution par type, gates --expect COL=TYPE/--check exit 2, JSON, stdin) ✓ 2026-08-03
+- [x] markdown-list-indent-report : rapporte et lint l'indentation des listes Markdown (bullets + ordonnées, fences/inline code ignorés, depth par --step, sauts de niveau détectés, tabs expandés, gates --check/--max-depth exit 2, JSON, stdin) ✓ 2026-08-03
+- [x] env-key-order-compare : compare l'ordre des clés de deux .env (clés manquantes chaque côté, clés déplacées, LCS + score de similarité, export toléré, valeurs jamais lues, gates --check/--ignore-missing exit 2, JSON, stdin) ✓ 2026-08-03
+- [x] text-word-frequency-rank : classe les mots d'un texte par fréquence (rangs partagés en cas d'égalité, ordre alpha dans un rang, Unicode, --top/--min-count, gates --require/--expect-top/--max-unique exit 2, JSON, stdin) ✓ 2026-08-03
+- [x] json-keys-case-report : classifie le style de casse de chaque clé JSON (camel/pascal/snake/kebab/upper_snake/flat/other, chemins jq, distribution, gates --check mixed/--require/--forbid exit 2, JSON, stdin) ✓ 2026-08-03
+
+
 ## Vague 638 — CLI Tools (CSV, Markdown, URL, JSON)
 - [x] csv-empty-cell-report : rapporte les cellules vides d'un CSV (par colonne + total, --whitespace, --column ciblé, --row-details, délimiteur sniffé, gates --check/--max/--require-any/--require-column-nonempty exit 2, JSON, stdin) ✓ 2026-08-03
 - [x] markdown-strikethrough-extract : extrait les segments barrés ~~texte~~ (fences, inline code et échappés ignorés, line:col, --unique/--count/--text-only/--strip, gates --check/--require-min/--max-count exit 2, JSON, stdin) ✓ 2026-08-03

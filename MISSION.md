@@ -4303,6 +4303,7 @@ Push automatique après chaque outil.
 - [x] json-array-length : rapport des longueurs de tous les arrays d'un document JSON (chemins jq-style, tri par taille/chemin, totaux, gates --min/--max/--require-non-empty/--require exit 2, JSON) ✓ 2026-08-03
 - [x] env-comment-strip : supprime ou rapporte les commentaires d'un .env (hash dans valeurs préservé, quotes respectées, --list/--comments-only/--in-place, --check exit 2, JSON) ✓ 2026-08-03
 - [x] csv-merge-columns : fusionne plusieurs colonnes d'un CSV en une seule (séparateur configurable, --append pour préserver, skip-empty par défaut, --check lignes vides exit 2, JSON) ✓ 2026-08-03
+- [x] markdown-code-blocks : extrait et rapporte les blocs fenced d'un Markdown (``` et ~~~, filtre --lang, --number, --list, gates --check/--require exit 2, JSON) ✓ 2026-08-03
 
 ## Vague 607 — CLI Tools (JSON, env, texte)
 - [x] json-null-stats : statistiques sur les valeurs null d'un document JSON (ratio NULL/1/0/0.0/""/"null", par chemin, --require-max-null exit 2, JSON) ✓ 2026-08-03

@@ -1,6 +1,13 @@
 # OpenClaw — File d'attente des outils
 
 
+## Vague 676 — CLI Tools (Markdown, mots, env, chiffres, phrases)
+- [x] markdown-heading-level-check : audite la structure des titres Markdown ATX/Setext (sauts de niveau, premier titre non-H1, doublons insensibles à la casse, >H6 et sans-espace signalés, fences ignorées, histogramme, gates --check/--require-h1/--min-headings/--max-level exit 2, JSON, stdin, 16 tests) ✓ 2026-08-03
+- [x] text-word-length-stats : statistiques de longueur des mots (extraction Unicode, chiffres exclus, contractions, mean/median/mode/stdev, histogramme + barres, --min-len, gates --min-words/--max-mean/--min-mean/--max-length exit 2, JSON, stdin, 13 tests) ✓ 2026-08-03
+- [x] env-comment-extract : extrait/audite les commentaires .env (full-line + inline, '#' hors quotes, doc-ratio, clés sans doc, --comments-only/--undocumented, gates --check/--require-documented/--min-doc-ratio/--max-undocumented exit 2, JSON, stdin, 15 tests) ✓ 2026-08-03
+- [x] text-digit-strip-report : supprime/audite les chiffres du texte (runs reportés ligne:col, --strip/--placeholder, --count-only, gates --check/--require/--max-runs/--max-digits exit 2, JSON, stdin, 16 tests) ✓ 2026-08-03
+- [x] text-sentence-split-count : compte les phrases (segmenteur à règles, abréviations Mr./e.g. et décimales 3.14 protégées, stats mots avg/min/max, --list/--count-only, gates --check/--min/--max/--require exit 2, JSON, stdin, 17 tests) ✓ 2026-08-03
+
 ## Vague 675 — CLI Tools (env, lignes, CSV, chiffres, booléens)
 - [x] env-url-components : décompose/valide les valeurs URL d'un .env (scheme/host/port/path/query/fragment, allow-list --schemes, ports invalides, export/quotes tolérés, gates --check/--require-url exit 2, JSON, stdin, 11 tests) ✓ 2026-08-03
 - [x] line-first-word-freq : fréquence du premier mot de chaque ligne (--lowercase/--strip-punct, tris count/alpha/first, --top, gates --require/--min-ratio exit 2, JSON, stdin, 10 tests) ✓ 2026-08-03
